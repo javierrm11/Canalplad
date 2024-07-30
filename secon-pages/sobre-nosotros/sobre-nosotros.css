@@ -1,0 +1,578 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+.main {
+    background-color: white;
+}
+
+/*Parte del header de la página*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e7e7e7;
+    backdrop-filter: blur(5px);
+    padding: 5px 5% 5px 5%;
+}
+
+
+.logo {
+    align-self: center;
+}
+.logo a {
+    text-align: -webkit-center;
+    margin: 2%;
+}
+.logo img {
+    height: auto;
+    display: block;
+}
+.logo img {
+    width: 70%;
+    
+}
+
+.menu {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    place-content: center;
+    justify-content: space-evenly;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1%;
+    color: #da251c;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.menu a:hover {
+    background-color:  #da251c;
+    color: white;
+}
+
+.redes {
+    width: 70%;
+    display: flex;
+    align-self: center;
+    justify-content: end;
+}
+
+
+
+.div-wass {
+    display: flex;
+    align-self: center;
+    padding-right: 5%;
+    background-color: #00923f;
+    margin: 0 0 0 3%;
+}
+
+.div-wass a {
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+}
+
+
+
+.div-wass h5 {
+    align-self: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Final header*/
+/*Principio sobre nosotros*/
+.que-es {
+    width: 100%;
+    
+}
+
+.que-es h4 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #da251c;
+    padding: 4% 0% 2% 5%;
+
+}
+.que-es p {
+    color: #6c6c6c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    padding: 2px;
+    background-color: white;
+    width: 100%;
+    padding: 2% 5% 2% 5%;
+    font-weight: bold;
+    font-style: italic;
+}
+/*fin*/
+/*parte baja*/
+.info {
+    margin: 5%;
+    display: flex;
+}
+
+.carrusel {
+    position: relative;
+    width: -webkit-fill-available;
+}
+
+.carrusel img {
+    width: 100%; /* Ajusta según sea necesario */
+    animation: 3s izquierda;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(0.5);
+    
+}
+
+.derecha {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* width: 60%; */
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.info-2 p {
+    font-size: 1.2em;
+    color: white;
+    background-color: #da251c;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+    margin: 0 2% 2% 2%;
+    z-index: 2; /* Ajusta según sea necesario para superponer sobre la imagen */
+}
+
+.estadisticas {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    z-index: 2; /* Ajusta según sea necesario para superponer sobre la imagen */
+}
+
+.estadisticas a {
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    width: 100%;
+    font-weight: 600;
+    align-self: center;
+    text-align: center;
+    border-radius: 2em;
+    box-shadow: 0px 0px 10px;
+}
+
+
+
+@media all and (max-width:1150px){
+    
+    .servicios {
+        flex-direction: column;
+    }
+    .canalones {
+        width: 97%;
+        height: 50%;
+    }
+    .pladur {
+        width: 97%;
+        height: 50%;
+    }
+    .colores-ejem {
+        place-content: center;
+    }
+    .alert {
+        padding: 10px 30px 10px 30px;
+    }
+}
+
+@media all and (max-width:700px){
+    
+    .color {
+        width: 80px;
+        height: 80px;
+    }
+    .color p {
+        font-size: 1em;
+        padding: 3px;
+    }
+    .alert p {
+        font-size: 1em;
+    }
+    .cornisa {
+        flex-direction: column-reverse;
+    }
+    .canalones-text {
+        width: 100%;
+    }
+    .cornisa img {
+        width: 100%;
+    }
+}
+
+@media all and (max-width:480px){
+    
+    .color {
+        width: 70px;
+        height: 70px;
+    }
+    .color p {
+        font-size: 0.8em;
+    }
+    .porque-pladur-div p {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .presupuesto p {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    .presupuesto a {
+        font-size: 1.1em;
+    }
+}
+.servicios {
+    flex-direction: column;
+}
+.canalones {
+    width: 97%;
+    height: 50%;
+}
+.pladur {
+    width: 97%;
+    height: 50%;
+}
+.colores-ejem {
+    place-content: center;
+}
+.alert {
+    padding: 10px 30px 10px 30px;
+}
+
+
+@media all and (max-width:700px){
+
+.color {
+    width: 80px;
+    height: 80px;
+}
+.color p {
+    font-size: 1em;
+    padding: 3px;
+}
+.alert p {
+    font-size: 1em;
+}
+.cornisa {
+    flex-direction: column-reverse;
+}
+.canalones-text {
+    width: 100%;
+}
+.cornisa img {
+    width: 100%;
+}
+}
+
+@media all and (max-width:480px){
+
+.color {
+    width: 70px;
+    height: 70px;
+}
+.color p {
+    font-size: 0.8em;
+}
+.porque-pladur-div p {
+    padding: 10px;
+    font-size: 1em;
+}
+.presupuesto p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.presupuesto a {
+    font-size: 1.1em;
+}
+}
+
+.grupoo {
+    display: flex;
+    width: 100%;
+}
+@media all and (max-width:370px){
+    .estadisticas a {
+        border-radius: 0;
+    }
+}
+
+@media all and (max-width:500px){
+    .menu {
+        flex-direction: column;
+    }
+    .titulo h1 {
+        font-size: 2em;
+    }
+    .titulo h4 {
+        font-size: 1.5em;
+    }
+    .servicios {
+        height: 45vh;
+    }
+    .menu a {
+        padding: 3%;
+    }
+}
+@media all and (max-width:840px){
+    .menu { 
+     width: 90%;  
+    }
+
+ .logo {
+     width: 50%;
+ }
+ }
+ @media all and (max-width:1060px){
+
+    .tarjets {
+        flex-direction: column;
+    }
+    .tarjet {
+        width: 100%;
+    }
+    .tarjet-right {
+        width: 100%;
+    }
+    .contact div {
+        width: 90%;
+    }
+    .tarjet-top p {
+        width: 80%;
+    }
+    .tarjet-top img {
+        width: 30%;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .tarjet-right p {
+        font-size: 1.2em;
+        margin: 3%;
+    }
+    .frase h5 {
+        font-size: 1.5em;
+    }
+}
+
+    
+    
+    @media all and (max-width:500px){
+        .menu {
+            flex-direction: column;
+        }
+        .titulo h1 {
+            font-size: 2em;
+        }
+        .titulo h4 {
+            font-size: 1.5em;
+        }
+        .servicios {
+            height: 45vh;
+        }
+    }
+    @media all and (max-width:840px){
+        .menu { 
+         width: 90%;  
+        }
+
+     .logo {
+        align-self: center;
+        text-align: center;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+     }
+     .logo {
+        width: 30%;
+    }
+     @media all and (max-width:1060px){
+    
+        .tarjets {
+            flex-direction: column;
+        }
+        .tarjet {
+            width: 100%;
+        }
+        .tarjet-right {
+            width: 100%;
+        }
+        .contact div {
+            width: 90%;
+        }
+        .tarjet-top p {
+            width: 80%;
+        }
+        .tarjet-top img {
+            width: 30%;
+        }
+        .header {
+            flex-direction: column;
+        }
+        .tarjet-right p {
+            font-size: 1.2em;
+            margin: 3%;
+        }
+        .frase h5 {
+            font-size: 1.5em;
+        }
+    }
+    @media all and (max-width:1000px){
+
+        .que-es p {
+            font-size: 1em;
+    }
+    .info-2 p {
+        font-size: 1em;
+    }
+    
+    .carrusel {
+        width: 100%;
+    }
+    .carrusel img {
+        width:100%;
+    }
+    .estadisticas {
+        margin: 10px;
+        text-align-last: center;
+    }
+
+}
+@media all and (max-width:700px){
+    .info {
+        flex-direction: column;
+    }
+    
+
+ }
+ /*footer*/
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    padding:2% 5% 2% 5%;
+}
+.footer-div {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.footer-mapa {
+    width: auto;
+}
+.footer-seccion {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.footer-div div a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #00923f;
+    padding: 8% 4% 8% 0;
+    width: fit-content;
+}
+.footer-seccion h5 {
+    color: #da251c;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-bottom: 4%;
+}
+.footer-seccion p {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #00923f;
+    margin-right: 8%;
+}
+
+
+.footer-mapa iframe {
+    height: -webkit-fill-available;
+    border: 0;
+    width: -webkit-fill-available;
+    
+}
+@media all and (max-width:400px){
+    .footer-seccion h5 {
+        font-size: 1.3em;
+    }
+    
+}
+@media all and (max-width:580px){
+    .footer-div{
+        flex-wrap: wrap;
+    }
+    .footer-seccion {
+        width: 50%;
+    }
+    .canal {
+        width: 100%;
+    }
+}
+@media all and (max-width:500px){
+    .grupoo {
+        flex-direction: column;
+    }
+    .logo {
+        align-self: center;
+        width: fit-content;
+    }
+    .redes {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media all and (max-width:1150px){
+    .footer {
+        flex-direction: column;
+    }
+    
+    .footer-mapa {
+        width: 100%;
+        padding: 2%;
+    }
+    .footer-mapa iframe {
+        height: auto;
+        width: -webkit-fill-available;
+    }
+}
+.copy {
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: #e7e7e7;
+    background-color: #da251c;
+    padding: 5px;
+    text-align: center;
+}
+

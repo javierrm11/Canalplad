@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/   # Deshabilita el rastreo de la carpeta 'private'
+Disallow: /otra-carpeta-restringida/   # Deshabilita el rastreo de otra carpeta restringida
+Allow: /   # Permite el rastreo del resto del sitio
+
+Sitemap: https://canalonescanalplad.es/sitemap.xml   # Especifica la ubicación del sitemap
