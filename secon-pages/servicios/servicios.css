@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url(../../css/header.css);
+@import url(../../css/footer.css);
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+.main {
+    background-color: #001f0f;
+}
+
+
+/*Empieza alerta*/
+.alert {
+    margin: 4% 10%;
+    padding: 3%;
+    border: 3px solid #00ff6e;
+    box-shadow: 0px 0px 10px white;
+}
+
+.alert h3{
+    font-size: 2vw;
+    font-family: "Jost";
+    color: white;
+    margin-bottom: 2%;
+}
+.alert p {
+    font-size: 1.5vw;
+    font-family: "Jost";
+    color: rgb(235, 235, 235);
+    font-weight: 500;
+}
+/*Fin de alerta*/
+section {
+    margin: 8% 10%;
+}
+/*Canalones main*/
+.canalones-main h4 {
+    font-family: 'Jost';
+    color: white;
+    font-size: 5vw;
+}
+.img{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.canalones-main p {
+    margin-top: 2%;
+    font-size: 2vw;
+    font-family: "Jost";
+    color: rgb(238, 238, 238);
+
+    
+}
+
+.imagenes-canalones {
+    margin-top: 8%;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: .8vw;
+    row-gap: 1.8rem;
+}
+.imagenes-canalones img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.imagenes-canalones img:hover{
+    box-shadow: 0px 0px 10px #da251c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    align-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Fin de canalones main*/
+/*Colores*/
+.colores {
+    margin-top: 8%;
+}
+.colores h5 {
+    color: white;
+    font-family: "Jost";
+    font-size: 4vw;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2%;
+
+}
+
+.colores-ejem {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: .8vw;
+    row-gap: 1.8rem;
+}
+
+.color {
+    width: 12.5vw;
+    height: 12.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative; /* Añade posición relativa */
+    transition: transform 0.3s; /* Agrega una transición suave solo para transformar */
+}
+.color:hover {
+    transform: scale(1.25); /* Escala el elemento al hacer hover */
+    z-index: 1;
+    box-shadow: 0px 0px 100px black;
+}
+.color p {
+    font-family: "Jost";
+    font-size: 2vw;
+    margin: 0;
+    display: flex;
+    place-content: center;
+    align-items: self-end;
+    background-color: rgba(0, 0, 0, 0.421);
+    color: white;
+    padding: 5px;
+}
+
+/*COLORES CLASES*/
+.blanco {
+    background-color: #ffff;
+}
+.crema {
+    background-color: #f8dbbd;
+}
+.cobre {
+    background-color: #b06b5c;
+}
+.marron {
+    background-color: #402021;
+}
+.pizarra {
+    background-color: #212322;
+}
+.gris {
+    background-color: #707271;
+}
+.azul {
+    background-color: #070b2e;
+}
+.antracita {
+    background-color: #1e1e20;
+
+}
+.rosado {
+    background-color: #a57f74;
+}
+.teja-vieja {
+    background-color: #8d191c;
+}
+.verde {
+    background-color: #294634;
+}
+.bronce {
+    background-color: #282725;
+}
+.rojo-vasco {
+    background-color: #581e10;
+}
+/*COLORES CLASES FIN*/
+/*Fin colores*/
+
+.presupuesto{
+    margin: 8%
+}
+
+.presupuesto p {
+    font-family: "Jost";
+    font-size: 2vw;
+    color: rgb(225, 225, 225);
+    text-align: center;
+}
+
+/*FIN CANALONES*/
+/*Inicio pladur*/
+.pladur-main h4 {
+    font-family: 'Jost';
+    color: white;
+    font-size: 5vw;
+}
+
+.ventajas p {
+    margin-top: 2%;
+    font-size: 2vw;
+    font-family:"Jost";
+    color: rgb(223, 223, 223);   
+}
+
+
+
+.porque-pladur h5 {
+    color: white;
+    font-size: 4vw;
+    font-family: "Jost";
+    margin-top: 8%;
+    text-align: center;
+}
+.porque-pladur-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+
+}
+.porque-pladur-div p {
+    font-size: 2vw;
+    font-family: monospace;
+    color: #00ff6e;
+    margin: 2% 8%;
+    padding: 1.5%;
+    text-align: center;
+    
+}
+
+.imagenes-pladur{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: .8vw;
+    row-gap: 1.8rem;
+    margin-top: 8%;
+}
+.imagenes-pladur img {
+    width: 100%;
+    cursor: pointer;
+}
+.imagenes-pladur img:hover {
+    box-shadow: 0px 0px 10px #00ff6e;
+}
+
+
+/*Final pladur*/
+
+@media all and (max-width:1050px){
+    .alert h3{
+        font-size: 3vw;
+    }
+    .alert p{
+        font-size: 2vw;
+    }
+    .canalones-main p {
+        font-size: 2.5vw;
+    }
+}
+
+
+/*RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-*/
+@media all and (max-width:750px){
+    .alert {
+        margin: 8% 10%;
+    }
+    .alert h3 {
+        font-size: 4vw;
+        margin-bottom: 4%;
+    }
+    .alert p{
+        font-size: 2.5vw;
+    }
+
+    .canalones-main h4 {
+        font-size: 9vw;
+        margin-bottom: 4%;
+        text-align: center;
+    }
+    .canalones-main p {
+        font-size: 3vw;
+        margin-top: 6%;
+    }
+    .imagenes-canalones {
+        grid-template-columns: 1fr 1fr ;
+        column-gap: 1.8vw;
+        row-gap: 0.8rem;
+    }
+    .colores h5{
+        font-size: 5vw;
+    }
+    .colores-ejem{
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2.3vw;
+        row-gap: 0.8rem;
+    }
+    .color {
+        width: 24.5vw;
+        height: 24.5vw;
+    }
+    .color p {
+        font-size: 3vw;
+    }
+    .presupuesto p {
+        font-size: 3vw;
+    }
+    .pladur-main h4 {
+        font-size: 9vw;
+        margin-bottom: 4%;
+        text-align: center;
+    }
+    .pladur-main p {
+        font-size: 3vw;
+    }
+    .porque-pladur h5 {
+        font-size: 5vw;
+        margin-top: 10%;
+    }
+    .imagenes-pladur {
+        grid-template-columns: 1fr 1fr ;
+        column-gap: 1.8vw;
+        row-gap: 0.8rem;
+    }
+}
+
+@media all and (max-width:600px){
+    .alert {
+        padding: 8%;
+    }
+    .alert h3 {
+        font-size: 6vw;
+        margin-bottom: 4%;
+    }
+    .alert p{
+        font-size: 4vw;
+    }
+    .canalones-main p {
+        font-size: 4vw;
+    }
+    .colores h5 {
+        font-size: 7vw;
+    }
+    .presupuesto p {
+        font-size: 5vw;
+    }
+    .presupuesto {
+        margin: 10%;
+    }
+    .pladur-main p {
+        font-size: 4vw;
+    }
+    .porque-pladur h5 {
+        font-size: 7vw;
+        margin-bottom: 6%;
+    }
+}
+
+@media all and (max-width:500px){
+    .alert p{
+        font-size: 5vw;
+    }
+    .canalones-main p {
+        font-size: 5vw;
+        margin-top: 10%;
+    }
+    .pladur-main p {
+        font-size: 5vw;
+        margin-top: 10%;
+    }
+    .porque-pladur-div p{
+        margin-top: 6%;
+    }
+}
+
+
+
+
+
+
+    @-webkit-keyframes izquierda {  
+        0% { margin-left: -50%; }
+         100% { margin-left: 0%; }
+    }
+    @-webkit-keyframes derecha {  
+        0% { margin-left: 50%; }
+         100% { margin-left: 0%; }
+    }
+
+    @keyframes cambiofondo {
+        0% {background-color: #00ff6e;}
+        50% {background-color: #da251c;}
+        100%{background-color: #00ff6e;}
+    }

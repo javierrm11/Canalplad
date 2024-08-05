@@ -1,0 +1,427 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+.main {
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+/*Parte del header de la página*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e7e7e7;
+    backdrop-filter: blur(5px);
+    padding: 5px 5% 5px 5%;
+}
+
+
+.logo a {
+    text-align: -webkit-center;
+    margin: 2%;
+}
+.logo img {
+    height: auto;
+    display: block;
+}
+.logo img {
+    width: 70%;
+}
+
+.menu {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    place-content: center;
+    justify-content: space-evenly;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1%;
+    color: #da251c;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.menu a:hover {
+    background-color:  #da251c;
+    color: white;
+}
+
+.redes {
+        width: 70%;
+        display: flex;
+        align-self: center;
+        justify-content: end;
+    }
+
+
+
+.div-wass {
+    display: flex;
+    align-self: center;
+    padding-right: 5%;
+    background-color: #00923f;
+    margin: 0 0 0 3%;
+}
+
+.div-wass a {
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+}
+
+
+
+.div-wass h5 {
+    align-self: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Final header*/
+
+/*Inicio contacto*/
+.todo {
+    width: 100%;
+    display: flex;
+    background-color: #e3e3e34d;
+}
+
+
+
+.contacto {
+    width: 70%;
+    height: fit-content;
+    
+}
+.contacto-gmail {
+    display: flex;
+    width: 100%;
+    margin: 5%;
+}
+.contacto-gmail img {
+    width: 5%;
+    height: fit-content;
+    align-self: center;
+}
+.contacto-gmail h3 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    align-self: center;
+    color: #da251c;
+}
+
+.form {
+    width: 100%;
+}
+.form-class {
+    display: flex;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 2% 2% 0 5%;
+    width: 100%;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    color:  rgba(0, 0, 0, 0.67);
+    border: 2px solid #da251c;
+    border-radius: 3em;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-group p {
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.form-group-pedido textarea {
+    width: 50%;
+    padding: 10px;
+    margin-right: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    color: black;
+    border-radius: 0 2em;
+    border:2px solid #da251c;
+    
+
+}
+.form-submit {
+    background-color: #da251c;
+    color: white;
+    padding: 10px;
+    margin: 2% 2% 2% 5%;
+    border: 0;
+    font-size: 1.2em;
+}
+.form-submit:hover {
+    background-color: black;
+    color: #da251c;
+}
+
+/*Final*/
+/*Contacto otras vias*/
+.contacto-otros {
+    height: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.contacto-otros p {
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    color: black;
+}
+.redes-contacto {
+    margin-left: 5%;
+}
+.redes-contacto img {
+    width: 5%;
+}
+.redes-contacto img:hover {
+    transform: scale(1.25); /* Escala el elemento al hacer hover */
+}
+/*Fin*/
+.mapa {
+    width: 30%;
+    height: 89vh;
+}
+.mapa iframe {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    border: 0;
+
+}
+
+
+
+
+@media all and (max-width:1000px){
+    
+    .todo {
+        flex-direction: column;
+    }
+    .contacto {
+        width: 95%;
+    }
+    .contacto-gmail {
+        margin: 3% 3% 3% 5%;
+    }
+    .mapa {
+        width: 100%;
+        height: 30vh;
+    }
+    .mapa iframe {
+        height: inherit;
+    }
+}
+@media all and (max-width:600px){
+    .form-class {
+        flex-direction: column;
+    }
+    .form-group input {
+        width: 90%;
+    }
+    .redes-contacto img {
+        width: 15%;
+    }
+    .contacto-gmail img {
+        width: 15%;
+    }
+}
+
+.grupoo {
+    display: flex;
+    width: 100%;
+}
+
+@media all and (max-width:500px){
+    .menu {
+        flex-direction: column;
+    }
+    .titulo h1 {
+        font-size: 2em;
+    }
+    .titulo h4 {
+        font-size: 1.5em;
+    }
+    .servicios {
+        height: 45vh;
+    }
+    .menu a {
+        padding: 3%;
+    }
+}
+@media all and (max-width:840px){
+    .menu { 
+     width: 90%;  
+    }
+ .logo {
+     width: 50%;
+ }
+ }
+ .logo {
+    width: 30%;
+}
+ @media all and (max-width:1060px){
+
+    .tarjets {
+        flex-direction: column;
+    }
+    .tarjet {
+        width: 100%;
+    }
+    .tarjet-right {
+        width: 100%;
+    }
+    .contact div {
+        width: 90%;
+    }
+    .tarjet-top p {
+        width: 80%;
+    }
+    .tarjet-top img {
+        width: 30%;
+    }
+    .header {
+        flex-direction: column;
+    }
+
+    .tarjet-right p {
+        font-size: 1.2em;
+        margin: 3%;
+    }
+    .frase h5 {
+        font-size: 1.5em;
+    }
+}
+@media all and (max-width:1150px){
+    
+    .menu a {
+        font-size: 1.3em;
+    }
+
+    .div-wass h5 {
+        font-size: 1em;
+    }
+}
+/*footer*/
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    padding:2% 5% 2% 5%;
+}
+.footer-div {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.footer-mapa {
+    width: auto;
+}
+.footer-seccion {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.footer-div div a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #00923f;
+    padding: 8% 4% 8% 0;
+    width: fit-content;
+}
+.footer-seccion h5 {
+    color: #da251c;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-bottom: 4%;
+}
+.footer-seccion p {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #00923f;
+    margin-right: 8%;
+}
+
+
+.footer-mapa iframe {
+    height: -webkit-fill-available;
+    border: 0;
+    width: -webkit-fill-available;
+    
+}
+@media all and (max-width:400px){
+    .footer-seccion h5 {
+        font-size: 1.3em;
+    }
+    
+}
+@media all and (max-width:1150px){
+    .footer {
+        flex-direction: column;
+    }
+    
+    .footer-mapa {
+        width: 100%;
+        padding: 2%;
+    }
+    .footer-mapa iframe {
+        height: fit-content;
+        width: -webkit-fill-available;
+    }
+}
+@media all and (max-width:580px){
+    .footer-div{
+        flex-wrap: wrap;
+    }
+    .footer-seccion {
+        width: 50%;
+    }
+    .canal {
+        width: 100%;
+    }
+}
+@media all and (max-width:500px){
+    .grupoo {
+        flex-direction: column;
+    }
+    .logo {
+        align-self: center;
+        text-align: center;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    .redes {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.copy {
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: #e7e7e7;
+    background-color: #da251c;
+    padding: 5px;
+    text-align: center;
+}

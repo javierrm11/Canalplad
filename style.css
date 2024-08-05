@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(./css/header.css);
+@import url(./css/footer.css);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+/*Parte principal de la página*/
+
+main {
+    /*background-image: url(./imagenes/fondo-negro.jpg);*/
+    background-color: #001f0f;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+
+.frases {
+    display: flex;
+}
+/*Inicio*/
+.inicio {
+    height: 80%;
+    text-align: -webkit-center;
+}
+
+.titulo {
+    height: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin: 4% 0 4%;
+}
+
+.titulo img {
+    width: 30vw;
+    align-self: center;
+    z-index: 1;
+}
+
+.titulo h2 {
+    padding: 5% 4% 4% 4%;
+    font-size: 4.5vw;
+    font-family: "Jost";
+    font-weight: bolder;
+    width: 80%;
+    margin-top: -2%;
+    border: 3px solid red;
+    align-self: center;
+    animation: colores 4s infinite;
+    box-shadow: 0px 0px 10px white
+}
+
+.tarjet2 {
+    display: flex;
+    margin: 0% 10% 4% 10%;
+
+}
+
+.frase {
+    
+    height: auto;
+    margin: 1% 0 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+
+
+.frase h3 {
+    font-size: 2em;
+    font-family: monospace;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    place-content: center;
+    height: 100%;
+    align-items: center;
+    color: #00ff6e;
+}
+
+.galeria h3 {
+    font-size: 10vw;
+    font-family: "Jost";
+    color: white;
+}
+
+.galeria p {
+    font-size: 3vw;
+    font-family: "Jost";
+    color: rgb(209, 209, 209);
+}
+
+.imagen-container {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: .8vw;
+    row-gap: 1.8rem;
+    margin: 2% 0 2% 0 ;
+}
+.imagen-container img { 
+    width: 25.9vw;
+    height: auto;
+    cursor: pointer;    
+}
+.imagen-container img:hover{
+    box-shadow: 0px 0px 10px #da251c;
+}
+
+.mas { display: none;}
+
+#abrir-mas{
+    font-size: 1.5em;
+    padding: 2%;
+    border-radius: 40px;
+
+    align-self: center;
+    font-family: "Jost";
+    color: white;
+    background-color: black;
+    border: 2px solid #da251c;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    align-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.texto-info {
+    font-size: 1.5em;
+    color: rgb(221, 221, 221);
+    margin: 5% 10%;
+    font-family: "Jost";
+}
+
+.tarjet h4 {
+    font-family: "Jost";
+    font-size: 5vw;
+    color: white;
+
+}
+.tarjet {
+    margin: 10%;
+}
+.trabajos {
+    margin-top: 2%;
+}
+.trabajos h5 {
+    font-size: 2vw;
+    font-family: monospace;
+    color: #00ff6e;
+    margin: 2% 0;
+    padding: 1.5%;
+}
+
+/*Contacto*/
+.contact {
+    margin: 2% 10%;
+    padding: 1%;
+    box-shadow: 0px 0px 10px white;
+    animation: cambioborde 4s infinite;
+    
+}
+
+.contact div h4 {
+    padding: 1% 0 0 0%;
+    color: white;
+    font-size: 3vw;
+    font-family: "Jost";
+    
+}
+
+.contact div {
+    width: 100%;
+}
+
+.contact div p {
+    padding: 1% 0 2% 0%;
+    color: rgb(231, 231, 231);
+    font-size: 2vw;
+    font-family: "Jost";
+    width: 90%;
+}
+
+.contact a {
+    text-decoration: none;
+    padding: 2%;
+    font-size:3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    animation: coloress 1s infinite;
+}
+/*Final contacto*/
+
+/*Fin inicio*/
+
+/*Final main*/
+
+
+
+
+
+
+/*RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-*/
+
+@media all and (max-width:905px){
+    .tarjet2 {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width:750px){
+    .imagen-container{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+        column-gap: 2vw;
+    }
+    .imagen-container img {
+        width: 37.9vw;
+    }
+    
+    .modal-content {
+        width: 70%;
+    }
+
+    #abrir-mas {
+        font-size: 3vw;
+    }
+    .texto-info {
+        font-size: 2.5vw;
+    }
+}
+
+@media all and (max-width:600px){
+    .trabajos h5 {
+        font-size: 3vw;
+    }
+}
+
+@media all and (max-width:500px){
+    .titulo img {
+        width: 40vw;
+    }
+    .titulo h2 {
+        margin-top: -3%;
+    }
+    .frase h3 {
+        font-size: 5vw;
+    }
+    .texto-info {
+        font-size: 3vw;
+    }
+
+    .contact div h4 {
+        font-size: 4vw;
+    }
+    .contact div p {
+        font-size: 3.5vw;
+    }
+    .contact a {
+        font-size: 5vw;
+    }
+}
+
+
+/*menu responsive*/
+@media all and (max-width:840px){
+   nav { 
+    width: 90%;  
+   }
+   .redes {
+    width: 50%;
+    }
+    .topnav {
+        display: none;
+    }
+
+    .redes {
+        width: 70%;
+    }
+}
+   
+
+
+@keyframes inicio {  
+    0% { margin-left: -50%; }
+     100% { margin-left: 0%; }
+}
+/* @-webkit-keyframes inicio2 {  
+    0% { opacity: 0; }
+     100% { opacity: 1; }
+}
+*/
+
+@keyframes colores {  
+    0% { color: #da251c; }
+     50% { color: #00ff6e;}
+     100% { color: #da251c;}
+}
+
+@keyframes coloress {  
+    0% { color: #da251c; }
+     50% { color: #ffffff;}
+     100% { color: #da251c;}
+}
+
+@-webkit-keyframes coloress {  
+    0% { color: #da251c; }
+     50% { color: #ffffff;}
+     100% { color: #da251c;}
+}
+
+@-webkit-keyframes cambioborde {  
+    0% { border: 2px solid #da251c; }
+     50% { border: 2px solid #00ff6e;}
+     100% { border: 2px solid #da251c;}
+}
+    

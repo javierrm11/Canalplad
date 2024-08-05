@@ -1,0 +1,134 @@
+.header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.87); /* Fondo semitransparente */
+    backdrop-filter: blur(5px);
+    backdrop-filter: opacity(0.5);
+    padding: 1.5% 10% 1.5% 10%;
+
+    display: flex;
+}
+
+
+
+nav {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    place-content: center;
+    justify-content: space-evenly;
+}
+
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1%;
+    color: #da251c;
+    font-family: "Jost";
+    font-weight: bold;
+    
+}
+nav a:hover {
+    color: #00ff6e;
+}
+
+.redes {
+    width: 30%;
+    display: flex;
+    align-self: center;
+    justify-content: end;
+}
+
+
+.redes img:hover {
+    transform: scale(1.25); /* Escala el elemento al hacer hover */
+}
+
+.div-wass {
+    display: flex;
+    align-self: center;
+    padding-right: 5%;
+    margin: 0 0 0 3%;
+    background-color: #00923f;
+    height: 100%; /* Ajusta la altura para centrar verticalmente */
+}
+
+.div-wass a {
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+    display: grid;
+}
+
+.div-wass img {
+    align-self: center; /* Alinea la imagen verticalmente al centro */
+    place-self: center;
+}
+
+.div-wass h5 {
+    align-self: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.responsive {
+    display: none;
+    text-align: end;
+    align-content: center;
+}
+.responsive img {
+    width: 5%;
+}
+
+/*Final header*/
+
+@media all and (max-width:1050px){
+    #menu {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        justify-content: center;
+        padding-top: 10vh;
+        padding-bottom: 13rem;
+        z-index: 100;
+        
+    }
+    nav a {
+        padding: 3%;
+    }
+    .redes {
+        justify-content: start;
+    }
+    .responsive{
+        display: block;
+    }
+
+}
+
+@media all and (max-width:715px){
+    .responsive img {
+        width: 8%;
+    }
+}
+
+@media all and (max-width:540px){
+    .responsive img {
+        width: 12%;
+    }
+}
+
+@media all and (max-width:400px){
+    .responsive img {
+        width: 16%;
+    }
+}
+
+
+
