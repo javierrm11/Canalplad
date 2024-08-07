@@ -95,13 +95,12 @@ nav a:hover {
         text-align: center;
         background-color: black;
         justify-content: center;
-        padding-top: 10vh;
-        padding-bottom: 13rem;
+        height: 93vh;
         z-index: 100;
         
     }
     nav a {
-        padding: 3%;
+        padding: 5%;
     }
     .redes {
         justify-content: start;
@@ -121,6 +120,9 @@ nav a:hover {
 @media all and (max-width:540px){
     .responsive img {
         width: 12%;
+    }
+    nav a {
+        padding: 7%;
     }
 }
 
