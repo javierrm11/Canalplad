@@ -205,7 +205,7 @@ main {
 
 /*Contacto*/
 .contact {
-    margin: 2% 10%;
+    margin: 5% 10%;
     padding: 1%;
     box-shadow: 0px 0px 10px white;
     animation: cambioborde 4s infinite;
@@ -257,7 +257,18 @@ main {
 @media all and (max-width:905px){
     .tarjet2 {
         flex-direction: column;
+        margin: 10%;
     }
+    .texto-info {
+        margin: 10%;
+    }
+    .contact {
+        padding: 3%;
+    }
+    .titulo {
+        margin: 8% 0 8%;
+    }
+    
 }
 
 @media all and (max-width:750px){
@@ -310,6 +321,15 @@ main {
     }
     .contact a {
         font-size: 5vw;
+    }
+    .tarjet2 {
+        margin: 15% 10%;
+    }
+    .texto-info {
+        margin: 15% 10%;
+    }
+    .contact {
+        padding: 6%;
     }
 }
 

@@ -361,6 +361,18 @@ section {
         column-gap: 1.8vw;
         row-gap: 0.8rem;
     }
+    section {
+        margin: 15vw 10%;
+    }
+    .colores {
+        margin-top: 20vw;
+    }
+    .presupuesto {
+        margin: 15vw 10%;
+    }
+    .porque-pladur {
+        margin: 15vw 10%;
+    }
 }
 
 @media all and (max-width:600px){
