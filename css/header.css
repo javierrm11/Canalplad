@@ -15,9 +15,8 @@ nav {
     align-self: center;
     display: flex;
     place-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-
 
 nav a {
     text-decoration: none;
