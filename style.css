@@ -91,6 +91,7 @@ main {
 
 .galeria p {
     font-size: 3vw;
+    margin: 0 10%;
     font-family: "Jost";
     color: rgb(209, 209, 209);
 }
@@ -124,9 +125,14 @@ main {
     font-family: "Jost";
     color: white;
     background-color: black;
-    border: 2px solid #da251c;
+    box-shadow: 0px 0px 10px white;
     cursor: pointer;
+    margin: 2%;
 }
+#abrir-mas:hover{
+    box-shadow: 0px 0px 20px #00ff6e;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -286,16 +292,47 @@ main {
     }
 
     #abrir-mas {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .texto-info {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
+    }
+    .tarjet h4 {
+        font-size: 9vw;
+        margin-bottom: 6%;
+    }
+    .trabajos h5 {
+        font-size: 4vw;
+        margin: 4% 0;
+    }
+    .contact {
+        margin: 12% 10%;
+    }
+    .contact div h4 {
+        font-size: 6vw;
+    }
+    .contact div p {
+        font-size: 3vw;
+        padding: 4% 0 8% 0%;
+    }
+    .contact a {
+        font-size: 4vw;
     }
 }
 
 @media all and (max-width:600px){
     .trabajos h5 {
         font-size: 3vw;
+    }
+    #abrir-mas{
+        margin: 4%;
+    }
+    .trabajos {
+        margin-top: 14%;
+    }
+    .trabajos h5 {
+        font-size: 5vw;
+        margin: 8% 0;
     }
 }
 
@@ -310,12 +347,10 @@ main {
         font-size: 5vw;
     }
     .texto-info {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
-    .contact div h4 {
-        font-size: 4vw;
-    }
+
     .contact div p {
         font-size: 3.5vw;
     }
@@ -329,7 +364,10 @@ main {
         margin: 15% 10%;
     }
     .contact {
-        padding: 6%;
+        padding: 4%;
+    }
+    .galeria p {
+        font-size: 5vw;
     }
 }
 
