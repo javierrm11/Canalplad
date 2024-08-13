@@ -37,6 +37,10 @@ nav a:hover {
     align-self: center;
     justify-content: end;
 }
+.redes a {
+    align-content: center;
+    margin-right: 2vw;
+}
 
 
 .redes img:hover {
