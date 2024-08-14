@@ -37,7 +37,7 @@ main {
 }
 
 .titulo img {
-    width: 30vw;
+    width: 40vw;
     align-self: center;
     z-index: 1;
 }
@@ -47,12 +47,11 @@ main {
     font-size: 4.5vw;
     font-family: "Jost";
     font-weight: bolder;
+    text-wrap: balance;
     width: 80%;
     margin-top: -2%;
-    border: 3px solid red;
     align-self: center;
     animation: colores 4s infinite;
-    box-shadow: 0px 0px 10px white
 }
 
 .tarjet2 {
@@ -321,6 +320,9 @@ main {
 }
 
 @media all and (max-width:600px){
+    .titulo {
+        margin: 20% 0;
+    }
     .trabajos h5 {
         font-size: 3vw;
     }
@@ -334,14 +336,24 @@ main {
         font-size: 5vw;
         margin: 8% 0;
     }
+    .titulo img {
+        width: 50vw;
+    }
+    .titulo h2 {
+        font-size: 5.5vw;
+        padding: 8% 5% 5% 5%;
+        width: 90%;
+        margin-top: -3%;
+    }
 }
 
 @media all and (max-width:500px){
     .titulo img {
-        width: 40vw;
+        width: 55vw;
     }
     .titulo h2 {
         margin-top: -3%;
+        font-size: 6vw;
     }
     .frase h3 {
         font-size: 5vw;
@@ -402,9 +414,12 @@ main {
 */
 
 @keyframes colores {  
-    0% { color: #da251c; }
-     50% { color: #00ff6e;}
-     100% { color: #da251c;}
+    0% { color: #da251c;
+        box-shadow: 0px 0px 80px #da251c; }
+     50% { color: #00ff6e;
+        box-shadow: 0px 0px 80px #00ff6e;}
+     100% { color: #da251c;
+        box-shadow: 0px 0px 80px #da251c;}
 }
 
 @keyframes coloress {  
