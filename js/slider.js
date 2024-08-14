@@ -45,6 +45,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Mostrar la primera diapositiva
         showSlide(currentSlide);
+
+        // Función para avanzar la diapositiva automáticamente
+        function autoSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Configurar el intervalo de 3 segundos para el auto-slide
+        setInterval(autoSlide, 3000);
     }
 
     // Inicializar todos los carruseles en la página
