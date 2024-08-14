@@ -48,12 +48,23 @@
                     En este modelo de Canalón podemos poner un chorro o añadirle un bajante.
                 </p>
                 </div>
-                <div class="imagenes-canalones">
-                    <img src="../../imagenes/canalon1.webp" class="img-pagina" alt="instalación de canalon en Córdoba" loading="lazy" onclick="openModal(this)">
-                    <img src="../../imagenes/canalon3.webp" class="img-pagina" alt="instalación de canalon en Córdoba" loading="lazy" onclick="openModal(this)">
-                    <img src="../../imagenes/canalon2.webp" class="img-pagina" alt="instalación de canalon en Córdoba" loading="lazy" onclick="openModal(this)">
+                <div class="carrusel">
+                    <button class="prev">&#10094;</button>
+                    <div class="imagenes-canalones">
+                        <div class="imagen-canalon active">
+                            <img src="../../imagenes/canalon1.webp" class="img-pagina" alt="instalación de canalon en Córdoba" loading="lazy" onclick="openModal(this)">
+                        </div>
+                        <div class="imagen-canalon">
+                            <img src="../../imagenes/canalon3.webp" class="img-pagina" alt="instalación de canalon en Córdoba" loading="lazy" onclick="openModal(this)">
+                        </div>
+                        <div class="imagen-canalon">
+                            <img src="../../imagenes/canalon2.webp" class="img-pagina" alt="instalación de canalon en Córdoba" loading="lazy" onclick="openModal(this)">
+                        </div>
+                    </div>
+                    <button class="next">&#10095;</button>
+                    <div class="botones"></div>
                 </div>
-                <script src="../../js/slider.js"></script>
+                
                 <div id="myModal" class="modal">
                     <span class="close" onclick="closeModal()">&times;</span>
                     <img class="modal-content" id="imgModal">
@@ -129,10 +140,21 @@
                         <p>SIRVE PARA LEVANTAR TABIQUES DE DISTRIBUCIÓN, DE SEPARACIÓN Y PARA REVESTIR MUROS.</p>
                     </div>
                 </div>
-                <div class="imagenes-pladur">
-                    <img src="../../imagenes/pladur2.webp" alt="monteaje de pladur en Córdoba" loading="lazy" onclick="openModal(this)">
-                    <img src="../../imagenes/pladur1.webp" alt="monteaje de pladur en Córdoba" loading="lazy" onclick="openModal(this)">
-                    <img src="../../imagenes/pladur3.webp" alt="monteaje de pladur en Córdoba" loading="lazy" onclick="openModal(this)">
+                <div class="carrusel">
+                    <button class="prev">&#10094;</button>
+                    <div class="imagenes-pladur">
+                        <div class="imagen-pladur active">
+                            <img src="../../imagenes/pladur2.webp" alt="monteaje de pladur en Córdoba" loading="lazy" onclick="openModal(this)">
+                        </div>
+                        <div class="imagen-pladur">
+                            <img src="../../imagenes/pladur1.webp" alt="monteaje de pladur en Córdoba" loading="lazy" onclick="openModal(this)">
+                        </div>
+                        <div class="imagen-pladur">
+                            <img src="../../imagenes/pladur3.webp" alt="monteaje de pladur en Córdoba" loading="lazy" onclick="openModal(this)">
+                        </div>
+                    </div>
+                    <button class="next">&#10095;</button>
+                    <div class="botones"></div>
                 </div>
                 <div id="myModal" class="modal">
                     <span class="close" onclick="closeModal()">&times;</span>
@@ -175,6 +197,7 @@
     
     <script src="../../js/menu.js"></script>
     <script src="../../js/modal.js"></script>
+    <script src="../../js/slider.js"></script>
     
 </body>
 </html>

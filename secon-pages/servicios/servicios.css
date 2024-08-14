@@ -428,19 +428,87 @@ section {
 
 
 
+@-webkit-keyframes izquierda {  
+    0% { margin-left: -50%; }
+    100% { margin-left: 0%; }
+}
+@-webkit-keyframes derecha {  
+    0% { margin-left: 50%; }
+    100% { margin-left: 0%; }
+}
 
+@keyframes cambiofondo {
+    0% {background-color: #00ff6e;}
+    50% {background-color: #da251c;}
+    100%{background-color: #00ff6e;}
+}
 
-    @-webkit-keyframes izquierda {  
-        0% { margin-left: -50%; }
-         100% { margin-left: 0%; }
-    }
-    @-webkit-keyframes derecha {  
-        0% { margin-left: 50%; }
-         100% { margin-left: 0%; }
+/* Carrusel */
+.botones, .next, .prev {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .imagenes-canalones, .imagenes-pladur {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
     }
 
-    @keyframes cambiofondo {
-        0% {background-color: #00ff6e;}
-        50% {background-color: #da251c;}
-        100%{background-color: #00ff6e;}
+    .imagen-canalon, .imagen-pladur {
+        min-width: 100%;
+        transition: transform 0.5s ease;
     }
+
+    .carrusel {
+        position: relative;
+        width: 100%;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -9vw;
+        padding: 3vw;
+        color: white;
+        font-weight: bold;
+        font-size: 3vw;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        border: 0;
+    }
+
+    .next {
+        display: block;
+        right: 0;
+        border-radius: 3vw 0 0 3vw;
+    }
+
+    .prev {
+        display:block;
+        left: 0;
+        border-radius: 0 3vw 3vw 0;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+    }
+
+    .boton {
+        background-color: #ddd;
+        border: none;
+        padding: 2vw;
+        cursor: pointer;
+        margin: 0 1vw;
+        border-radius: 50%;
+    }
+
+    .boton.active {
+        background-color: #00ff6e;
+    }
+}
+
