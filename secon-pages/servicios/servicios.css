@@ -428,11 +428,11 @@ section {
 
 
 
-@-webkit-keyframes izquierda {  
+@keyframes izquierda {  
     0% { margin-left: -50%; }
     100% { margin-left: 0%; }
 }
-@-webkit-keyframes derecha {  
+@keyframes derecha {  
     0% { margin-left: 50%; }
     100% { margin-left: 0%; }
 }

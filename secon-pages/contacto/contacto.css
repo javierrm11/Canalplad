@@ -149,7 +149,7 @@
         font-size: 2vw;
     }
     .contacto-otros p {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
     .redes-contacto img {
         width: 5vw;
@@ -191,9 +191,12 @@
         grid-template-columns: 1fr;
         row-gap: 0.8rem;
     }
+    .contacto-otros p {
+        font-size: 5vw;
+    }
 }
 
-@-webkit-keyframes cambioborde {  
+@keyframes cambioborde {  
     0% { border: 3px solid #da251c; }
      50% { border: 3px solid #00ff6e;}
      100% { border: 3px solid #da251c;}

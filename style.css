@@ -434,7 +434,7 @@ main {
      100% { color: #da251c;}
 }
 
-@-webkit-keyframes cambioborde {  
+@keyframes cambioborde {  
     0% { border: 2px solid #da251c; }
      50% { border: 2px solid #00ff6e;}
      100% { border: 2px solid #da251c;}
