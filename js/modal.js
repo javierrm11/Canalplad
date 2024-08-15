@@ -1,7 +1,19 @@
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("imgModal");
+var captionText = document.getElementById("caption");
+var nextButtons = document.querySelectorAll('.next');
+var prevButtons = document.querySelectorAll('.prev');
+
 function openModal(element) {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("imgModal");
-    var captionText = document.getElementById("caption");
+     // Selecciona todos los elementos con la clase "next"
+
+    // Ocultar todos los botones con la clase "next"
+    nextButtons.forEach(button => {
+        button.style.display = "none";
+    });
+    prevButtons.forEach(prev => {
+        prev.style.display = "none";
+    });
 
     modal.style.display = "block";
     modalImg.src = element.src;
@@ -9,6 +21,15 @@ function openModal(element) {
 }
 
 function closeModal() {
-    var modal = document.getElementById("myModal");
+     // Selecciona todos los elementos con la clase "next"
+
     modal.style.display = "none";
+
+    // Mostrar nuevamente todos los botones con la clase "next"
+    nextButtons.forEach(button => {
+        button.style.display = "block";
+    });
+    prevButtons.forEach(prev => {
+        prev.style.display = "block";
+    });
 }

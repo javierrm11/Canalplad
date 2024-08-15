@@ -154,15 +154,6 @@ main {
     max-width: 700px;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-}
 
 .close {
     position: absolute;
@@ -296,11 +287,11 @@ main {
     .texto-info {
         font-size: 3.5vw;
     }
-    .tarjet h4 {
+    .tarjet h2 {
         font-size: 9vw;
         margin-bottom: 6%;
     }
-    .trabajos h5 {
+    .trabajos h3 {
         font-size: 4vw;
         margin: 4% 0;
     }
@@ -323,23 +314,20 @@ main {
     .titulo {
         margin: 20% 0;
     }
-    .trabajos h5 {
-        font-size: 3vw;
-    }
     #abrir-mas{
         margin: 4%;
     }
     .trabajos {
         margin-top: 14%;
     }
-    .trabajos h5 {
+    .trabajos h3 {
         font-size: 5vw;
         margin: 8% 0;
     }
     .titulo img {
         width: 50vw;
     }
-    .titulo h2 {
+    .titulo h1 {
         font-size: 5.5vw;
         padding: 8% 5% 5% 5%;
         width: 90%;
