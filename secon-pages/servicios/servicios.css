@@ -21,7 +21,7 @@
     box-shadow: 0px 0px 10px white;
 }
 
-.alert h3{
+.alert h1{
     font-size: 2vw;
     font-family: "Jost";
     color: white;
@@ -38,7 +38,7 @@ section {
     margin: 8% 10%;
 }
 /*Canalones main*/
-.canalones-main h4 {
+.canalones-main h2 {
     font-family: 'Jost';
     color: white;
     font-size: 5vw;
@@ -118,7 +118,7 @@ section {
 .colores {
     margin-top: 8%;
 }
-.colores h5 {
+.colores h3 {
     color: white;
     font-family: "Jost";
     font-size: 4vw;
@@ -220,7 +220,7 @@ section {
 
 /*FIN CANALONES*/
 /*Inicio pladur*/
-.pladur-main h4 {
+.pladur-main h2 {
     font-family: 'Jost';
     color: white;
     font-size: 5vw;
@@ -235,7 +235,7 @@ section {
 
 
 
-.porque-pladur h5 {
+.porque-pladur h3 {
     color: white;
     font-size: 4vw;
     font-family: "Jost";
@@ -278,7 +278,7 @@ section {
 /*Final pladur*/
 
 @media all and (max-width:1050px){
-    .alert h3{
+    .alert h1{
         font-size: 3vw;
     }
     .alert p{
@@ -295,7 +295,7 @@ section {
     .alert {
         margin: 8% 10%;
     }
-    .alert h3 {
+    .alert h1 {
         font-size: 4vw;
         margin-bottom: 4%;
     }
@@ -303,7 +303,7 @@ section {
         font-size: 2.5vw;
     }
 
-    .canalones-main h4 {
+    .canalones-main h2 {
         font-size: 9vw;
         margin-bottom: 4%;
         text-align: center;
@@ -318,7 +318,7 @@ section {
         row-gap: 0.8rem;
     }
     
-    .colores h5{
+    .colores h3{
         font-size: 5vw;
     }
     .colores-ejem{
@@ -336,7 +336,7 @@ section {
     .presupuesto p {
         font-size: 3vw;
     }
-    .pladur-main h4 {
+    .pladur-main h2 {
         font-size: 9vw;
         margin-bottom: 4%;
         text-align: center;
@@ -344,7 +344,7 @@ section {
     .pladur-main p {
         font-size: 3vw;
     }
-    .porque-pladur h5 {
+    .porque-pladur h3 {
         font-size: 5vw;
         margin-top: 10%;
     }
@@ -371,7 +371,7 @@ section {
     .alert {
         padding: 8%;
     }
-    .alert h3 {
+    .alert h1 {
         font-size: 6vw;
         margin-bottom: 4%;
     }
@@ -381,7 +381,7 @@ section {
     .canalones-main p {
         font-size: 4vw;
     }
-    .colores h5 {
+    .colores h3 {
         font-size: 7vw;
     }
     .presupuesto p {
@@ -393,7 +393,7 @@ section {
     .pladur-main p {
         font-size: 4vw;
     }
-    .porque-pladur h5 {
+    .porque-pladur h3 {
         font-size: 7vw;
         margin-bottom: 6%;
     }
