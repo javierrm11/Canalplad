@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const slides = carrusel.querySelectorAll('.imagen-canalon, .imagen-pladur');
         const totalSlides = slides.length;
         const botonesContainer = carrusel.querySelector('.botones');
+        let autoSlideInterval;
 
         function showSlide(index) {
             if (index >= totalSlides) {
@@ -51,8 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
             showSlide(currentSlide + 1);
         }
 
-        // Configurar el intervalo de 3 segundos para el auto-slide
-        setInterval(autoSlide, 3000);
+        // Solo activar el auto-slide si la pantalla es menor o igual a 750px
+        if (window.innerWidth <= 750) {
+            autoSlideInterval = setInterval(autoSlide, 3000);
+        }
+
+        // Escuchar cambios de tamaño de ventana para activar/desactivar auto-slide
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 750 && autoSlideInterval) {
+                clearInterval(autoSlideInterval); // Detener el auto-slide
+                autoSlideInterval = null;
+            } else if (window.innerWidth <= 750 && !autoSlideInterval) {
+                autoSlideInterval = setInterval(autoSlide, 3000); // Reiniciar el auto-slide
+            }
+        });
     }
 
     // Inicializar todos los carruseles en la página
