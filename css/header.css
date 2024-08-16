@@ -80,9 +80,7 @@ nav a:hover {
     display: none;
     text-align: end;
     align-content: center;
-}
-.responsive img {
-    width: 5%;
+    width: 70%;
 }
 
 /*Final header*/
@@ -115,18 +113,12 @@ nav a:hover {
 }
 
 @media all and (max-width:715px){
-    .responsive img {
-        width: 8%;
-    }
     #menu {
         top: 3.5rem;
     }
 }
 
 @media all and (max-width:540px){
-    .responsive img {
-        width: 12%;
-    }
     nav a {
         padding: 7%;
     }
@@ -135,12 +127,6 @@ nav a:hover {
 @media all and (max-width:415px){
     #menu {
         top: 3rem;
-    }
-}
-
-@media all and (max-width:400px){
-    .responsive img {
-        width: 16%;
     }
 }
 

@@ -1,6 +1,17 @@
 User-agent: *
-Disallow: /private/   # Deshabilita el rastreo de la carpeta 'private'
-Disallow: /otra-carpeta-restringida/   # Deshabilita el rastreo de otra carpeta restringida
-Allow: /   # Permite el rastreo del resto del sitio
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/
+Disallow: /cgi-bin/
+Disallow: /xmlrpc.php
+Disallow: /?s=*
 
-Sitemap: https://canalonescanalplad.es/sitemap.xml   # Especifica la ubicación del sitemap
+# Allow access to CSS, JS, and images
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/*.css
+Allow: /wp-content/themes/*.js
+
+# Sitemap location
+Sitemap: https://canalonescanalplad.es/sitemap.xml
