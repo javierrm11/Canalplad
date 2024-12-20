@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('abrir-mas');
-    const images = document.querySelectorAll('.mas');
+    const btn = document.getElementById('abrir-mas');
+    const imgs = document.querySelectorAll('.mas');
 
-    button.addEventListener('click', function() {
-        images.forEach(image => {
-            image.style.display = 'block';
+    btn.addEventListener('click', function() {
+        imgs.forEach(img => {
+            img.style.display = 'block';
         });
-        button.style.display = 'none'; // Oculta el botón después de mostrar las imágenes
+        btn.style.display = 'none';
     });
     
 });

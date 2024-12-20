@@ -1,10 +1,8 @@
 .header {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.87); /* Fondo semitransparente */
     backdrop-filter: blur(5px);
     backdrop-filter: opacity(0.5);
-    padding: 1.5% 10% 1.5% 10%;
-
+    padding: 2vh 10vw;
     display: flex;
 }
 
@@ -15,9 +13,8 @@ nav {
     align-self: center;
     display: flex;
     place-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-
 
 nav a {
     text-decoration: none;
@@ -29,7 +26,7 @@ nav a {
     
 }
 nav a:hover {
-    color: #00ff6e;
+    color: white;
 }
 
 .redes {
@@ -37,6 +34,10 @@ nav a:hover {
     display: flex;
     align-self: center;
     justify-content: end;
+}
+.redes a {
+    align-content: center;
+    margin-right: 2vw;
 }
 
 
@@ -77,9 +78,7 @@ nav a:hover {
     display: none;
     text-align: end;
     align-content: center;
-}
-.responsive img {
-    width: 5%;
+    width: 70%;
 }
 
 /*Final header*/
@@ -89,13 +88,16 @@ nav a:hover {
         display: none;
         position: absolute;
         flex-direction: column;
-        top: 4rem;
+        top: 7vh;
         left: 0;
         width: 100%;
         text-align: center;
-        background-color: black;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Capa de degradado */
+                url('../navidad/fondo.webp');
+        background-attachment: fixed;
+        backdrop-filter: opacity(7.5);
         justify-content: center;
-        height: 93vh;
+        height: 95vh;
         z-index: 100;
         
     }
@@ -111,24 +113,10 @@ nav a:hover {
 
 }
 
-@media all and (max-width:715px){
-    .responsive img {
-        width: 8%;
-    }
-}
 
 @media all and (max-width:540px){
-    .responsive img {
-        width: 12%;
-    }
     nav a {
         padding: 7%;
-    }
-}
-
-@media all and (max-width:400px){
-    .responsive img {
-        width: 16%;
     }
 }
 

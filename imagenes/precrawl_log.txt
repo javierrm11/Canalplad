@@ -1,0 +1,56 @@
+
+Date: Thu, 15 Aug 2024 13:43:47 GMT
+Requested URL: https://javierrm11.github.io/
+Source IP: 85.208.98.240
+Destination IP: 185.199.109.153
+User agent: Mozilla/5.0 (compatible; SemrushBot-SI/0.97; +http://www.semrush.com/bot.html)
+HTTP code: 404
+Content-type: text/html; charset=utf-8
+Content-encoding: gzip
+HTTPS issues: No HSTS support
+
+
+Crawling error: An invalid response was received from the page.
+-------------------------
+
+Date: Thu, 15 Aug 2024 13:43:48 GMT
+Requested URL: https://javierrm11.github.io/
+Source IP: 85.208.98.240
+Destination IP: 185.199.109.153
+User agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+HTTP code: 404
+Content-type: text/html; charset=utf-8
+Content-encoding: gzip
+HTTPS issues: No HSTS support
+
+
+Crawling error: An invalid response was received from the page.
+-------------------------
+
+Date: Thu, 15 Aug 2024 13:43:48 GMT
+Requested URL: http://javierrm11.github.io/
+Source IP: 85.208.98.240
+Destination IP: 185.199.109.153
+User agent: Mozilla/5.0 (compatible; SemrushBot-SI/0.97; +http://www.semrush.com/bot.html)
+HTTP code: 404
+Content-type: text/html; charset=utf-8
+Content-encoding: gzip
+
+
+Crawling error: An invalid response was received from the page.
+-------------------------
+
+Date: Thu, 15 Aug 2024 13:43:48 GMT
+Requested URL: http://javierrm11.github.io/
+Source IP: 85.208.98.241
+Destination IP: 185.199.109.153
+User agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+HTTP code: 404
+Content-type: text/html; charset=utf-8
+Content-encoding: gzip
+
+
+Crawling error: An invalid response was received from the page.
+-------------------------
+
+Subnet mask to whitelist: 85.208.98.128/25

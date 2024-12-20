@@ -56,7 +56,7 @@
     font-size: 2vw;
     font-family: "Jost";
     font-style: normal;
-    color: #da251c;
+    color: #00ff6e;
     padding: 1%;
     text-align: center;
 }
@@ -75,11 +75,13 @@
     }
 
     .footer-seccion h5 {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .footer-div div a {
-        font-size: 3vw;
+        font-size: 4vw;
+        padding: 10% 0%;
+        margin: 6% 0;
     }
 
     .canal{
@@ -88,6 +90,12 @@
 
     .footer-seccion p {
         text-align: center;
-        font-size: 3vw;
+        font-size: 4vw;
+    }
+    .footer-mapa iframe {
+        margin: 6% 0;
+    }
+    .copy{
+        font-size: 4vw;
     }
 }

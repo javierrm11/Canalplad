@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url(../../css/header.css);
 @import url(../../css/footer.css);
+@import url(../../css/jost.css);
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
 }
 
-.main {
-    background-color: #001f0f;
+main {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Capa de degradado */
+                url(../../navidad/fondo.webp);
+    background-attachment: fixed;
+    backdrop-filter: opacity(7.5);
 }
 
 
@@ -17,11 +20,12 @@
 .alert {
     margin: 4% 10%;
     padding: 3%;
-    border: 3px solid #00ff6e;
-    box-shadow: 0px 0px 10px white;
+    background: url(../../navidad/fondo-servicios.webp);
+    background-size: cover;
+    box-shadow: 0px 0px 39px white;
 }
 
-.alert h3{
+.alert h1{
     font-size: 2vw;
     font-family: "Jost";
     color: white;
@@ -38,10 +42,14 @@ section {
     margin: 8% 10%;
 }
 /*Canalones main*/
-.canalones-main h4 {
+.canalones-main h2 {
     font-family: 'Jost';
-    color: white;
     font-size: 5vw;
+    background: url(../../navidad/fondogaleria.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 }
 .img{
     width: 100%;
@@ -64,6 +72,9 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: .8vw;
     row-gap: 1.8rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), /* Capa de degradado */ url(../../navidad/h1-1.webp);
+    backdrop-filter: opacity(7.5);
+    background-position: bottom;
 }
 .imagenes-canalones img {
     width: 100%;
@@ -96,15 +107,6 @@ section {
     max-width: 700px;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-}
 
 .close {
     position: absolute;
@@ -127,13 +129,18 @@ section {
 .colores {
     margin-top: 8%;
 }
-.colores h5 {
+.colores h3 {
     color: white;
     font-family: "Jost";
     font-size: 4vw;
     text-align: center;
     width: 100%;
     margin-bottom: 2%;
+    background: url(../../navidad/navidad-fondo-servicios.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 
 }
 
@@ -229,10 +236,15 @@ section {
 
 /*FIN CANALONES*/
 /*Inicio pladur*/
-.pladur-main h4 {
+.pladur-main h2 {
     font-family: 'Jost';
     color: white;
     font-size: 5vw;
+    background: url(../../navidad/fondogaleria.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 }
 
 .ventajas p {
@@ -244,12 +256,17 @@ section {
 
 
 
-.porque-pladur h5 {
+.porque-pladur h3 {
     color: white;
     font-size: 4vw;
     font-family: "Jost";
     margin-top: 8%;
     text-align: center;
+    background: url(../../navidad/navidad-fondo-servicios.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 }
 .porque-pladur-div {
     display: flex;
@@ -264,6 +281,11 @@ section {
     margin: 2% 8%;
     padding: 1.5%;
     text-align: center;
+    background: url(../../navidad/fondo-1.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
     
 }
 
@@ -287,7 +309,7 @@ section {
 /*Final pladur*/
 
 @media all and (max-width:1050px){
-    .alert h3{
+    .alert h1{
         font-size: 3vw;
     }
     .alert p{
@@ -304,7 +326,7 @@ section {
     .alert {
         margin: 8% 10%;
     }
-    .alert h3 {
+    .alert h1 {
         font-size: 4vw;
         margin-bottom: 4%;
     }
@@ -312,7 +334,7 @@ section {
         font-size: 2.5vw;
     }
 
-    .canalones-main h4 {
+    .canalones-main h2 {
         font-size: 9vw;
         margin-bottom: 4%;
         text-align: center;
@@ -326,7 +348,8 @@ section {
         column-gap: 1.8vw;
         row-gap: 0.8rem;
     }
-    .colores h5{
+    
+    .colores h3{
         font-size: 5vw;
     }
     .colores-ejem{
@@ -344,7 +367,7 @@ section {
     .presupuesto p {
         font-size: 3vw;
     }
-    .pladur-main h4 {
+    .pladur-main h2 {
         font-size: 9vw;
         margin-bottom: 4%;
         text-align: center;
@@ -352,7 +375,7 @@ section {
     .pladur-main p {
         font-size: 3vw;
     }
-    .porque-pladur h5 {
+    .porque-pladur h3 {
         font-size: 5vw;
         margin-top: 10%;
     }
@@ -379,7 +402,7 @@ section {
     .alert {
         padding: 8%;
     }
-    .alert h3 {
+    .alert h1 {
         font-size: 6vw;
         margin-bottom: 4%;
     }
@@ -389,7 +412,7 @@ section {
     .canalones-main p {
         font-size: 4vw;
     }
-    .colores h5 {
+    .colores h3 {
         font-size: 7vw;
     }
     .presupuesto p {
@@ -401,7 +424,7 @@ section {
     .pladur-main p {
         font-size: 4vw;
     }
-    .porque-pladur h5 {
+    .porque-pladur h3 {
         font-size: 7vw;
         margin-bottom: 6%;
     }
@@ -427,19 +450,87 @@ section {
 
 
 
+@keyframes izquierda {  
+    0% { margin-left: -50%; }
+    100% { margin-left: 0%; }
+}
+@keyframes derecha {  
+    0% { margin-left: 50%; }
+    100% { margin-left: 0%; }
+}
 
+@keyframes cambiofondo {
+    0% {background-color: #00ff6e;}
+    50% {background-color: #da251c;}
+    100%{background-color: #00ff6e;}
+}
 
-    @-webkit-keyframes izquierda {  
-        0% { margin-left: -50%; }
-         100% { margin-left: 0%; }
-    }
-    @-webkit-keyframes derecha {  
-        0% { margin-left: 50%; }
-         100% { margin-left: 0%; }
+/* Carrusel */
+.botones, .next, .prev {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .imagenes-canalones, .imagenes-pladur {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
     }
 
-    @keyframes cambiofondo {
-        0% {background-color: #00ff6e;}
-        50% {background-color: #da251c;}
-        100%{background-color: #00ff6e;}
+    .imagen-canalon, .imagen-pladur {
+        min-width: 100%;
+        transition: transform 0.5s ease;
     }
+
+    .carrusel {
+        position: relative;
+        width: 100%;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -9vw;
+        padding: 3vw;
+        color: white;
+        font-weight: bold;
+        font-size: 3vw;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        border: 0;
+    }
+
+    .next {
+        display: block;
+        right: 0;
+        border-radius: 3vw 0 0 3vw;
+    }
+
+    .prev {
+        display:block;
+        left: 0;
+        border-radius: 0 3vw 3vw 0;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+    }
+
+    .boton {
+        background-color: #ddd;
+        border: none;
+        padding: 2vw;
+        cursor: pointer;
+        margin: 0 1vw;
+        border-radius: 50%;
+    }
+
+    .boton.active {
+        background-color: #00ff6e;
+    }
+}
+

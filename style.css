@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(./css/header.css);
 @import url(./css/footer.css);
+@import url(./css/jost.css);
 
 *{
     margin: 0px;
@@ -11,10 +11,10 @@
 /*Parte principal de la página*/
 
 main {
-    /*background-image: url(./imagenes/fondo-negro.jpg);*/
-    background-color: #001f0f;
-    background-repeat: repeat-y;
-    background-position: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Capa de degradado */
+                url('./navidad/fondo.webp');
+    background-attachment: fixed;
+    
 }
 
 
@@ -26,6 +26,15 @@ main {
     height: 80%;
     text-align: -webkit-center;
 }
+#navidad{
+    padding: 3vh 10vw;
+    background-color: #da251c;
+    color: white;
+    font-family: "Jost";
+}
+#navidad h2{
+    margin-bottom: 1vh;
+}
 
 .titulo {
     height: 90%;
@@ -33,32 +42,44 @@ main {
     display: flex;
     flex-direction: column;
     place-content: center;
-    margin: 4% 0 4%;
+    padding: 4% 0 4%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), /* Capa de degradado */
+                url('./navidad/bolas.webp');
+    background-position-x: center;
 }
 
 .titulo img {
-    width: 30vw;
+    width: 40vw;
     align-self: center;
     z-index: 1;
+    height: fit-content;
 }
 
-.titulo h2 {
+.titulo h1 {
     padding: 5% 4% 4% 4%;
     font-size: 4.5vw;
     font-family: "Jost";
     font-weight: bolder;
+    text-wrap: balance;
     width: 80%;
     margin-top: -2%;
-    border: 3px solid red;
     align-self: center;
     animation: colores 4s infinite;
-    box-shadow: 0px 0px 10px white
+    color: white;
+    background: url(./navidad/h1-1.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: cover;
 }
 
 .tarjet2 {
     display: flex;
     margin: 0% 10% 4% 10%;
-
+    background: url(./navidad/fondo-1.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 }
 
 .frase {
@@ -82,15 +103,20 @@ main {
     align-items: center;
     color: #00ff6e;
 }
-
-.galeria h3 {
+.galeria h2 {
     font-size: 10vw;
     font-family: "Jost";
     color: white;
+    background: url(./navidad/fondogaleria.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 }
 
 .galeria p {
     font-size: 3vw;
+    margin: 0 10%;
     font-family: "Jost";
     color: rgb(209, 209, 209);
 }
@@ -124,9 +150,14 @@ main {
     font-family: "Jost";
     color: white;
     background-color: black;
-    border: 2px solid #da251c;
+    box-shadow: 0px 0px 10px white;
     cursor: pointer;
+    margin: 2%;
 }
+#abrir-mas:hover{
+    box-shadow: 0px 0px 20px #00ff6e;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -149,15 +180,6 @@ main {
     max-width: 700px;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-}
 
 .close {
     position: absolute;
@@ -183,19 +205,33 @@ main {
     font-family: "Jost";
 }
 
-.tarjet h4 {
+.tarjet h2 {
     font-family: "Jost";
     font-size: 5vw;
-    color: white;
+    background: url(./navidad/fondogaleria.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
 
 }
 .tarjet {
     margin: 10%;
+    background: url(./navidad/fondo-navidad.webp);
+    background-size: 18vw;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 .trabajos {
     margin-top: 2%;
+    background: url(./navidad/fondo-1.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
 }
-.trabajos h5 {
+.trabajos h3 {
     font-size: 2vw;
     font-family: monospace;
     color: #00ff6e;
@@ -209,7 +245,9 @@ main {
     padding: 1%;
     box-shadow: 0px 0px 10px white;
     animation: cambioborde 4s infinite;
-    
+    background: linear-gradient(rgba(0, 0, 0, 0.478), rgba(0, 0, 0, 1)), /* Capa de degradado */ url(./navidad/luces.webp);
+    backdrop-filter: opacity(7.5);
+    background-position: bottom;
 }
 
 .contact div h4 {
@@ -217,6 +255,11 @@ main {
     color: white;
     font-size: 3vw;
     font-family: "Jost";
+    background: url(./navidad/fondogaleria.webp);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: contain;
     
 }
 
@@ -251,7 +294,6 @@ main {
 
 
 
-
 /*RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-RESPONSIVE-*/
 
 @media all and (max-width:905px){
@@ -266,7 +308,13 @@ main {
         padding: 3%;
     }
     .titulo {
-        margin: 8% 0 8%;
+        padding: 8% 0 8%;
+    }
+    #navidad h2{
+        font-size: 1.2rem;
+    }
+    #navidad p{
+        font-size: 0.8rem;
     }
     
 }
@@ -286,36 +334,75 @@ main {
     }
 
     #abrir-mas {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .texto-info {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
+    }
+    .tarjet h2 {
+        font-size: 9vw;
+        margin-bottom: 6%;
+    }
+    .trabajos h3 {
+        font-size: 4vw;
+        margin: 4% 0;
+    }
+    .contact {
+        margin: 12% 10%;
+    }
+    .contact div h4 {
+        font-size: 6vw;
+    }
+    .contact div p {
+        font-size: 3vw;
+        padding: 4% 0 8% 0%;
+    }
+    .contact a {
+        font-size: 4vw;
     }
 }
 
 @media all and (max-width:600px){
-    .trabajos h5 {
-        font-size: 3vw;
+    .titulo {
+        padding: 20% 0;
+    }
+    #abrir-mas{
+        margin: 4%;
+    }
+    .trabajos {
+        margin-top: 14%;
+    }
+    .trabajos h3 {
+        font-size: 5vw;
+        margin: 8% 0;
+    }
+    .titulo img {
+        width: 50vw;
+    }
+    .titulo h1 {
+        font-size: 5.5vw;
+        padding: 8% 5% 5% 5%;
+        width: 90%;
+        margin-top: -3%;
     }
 }
 
 @media all and (max-width:500px){
     .titulo img {
-        width: 40vw;
+        width: 55vw;
     }
     .titulo h2 {
         margin-top: -3%;
+        font-size: 6vw;
     }
     .frase h3 {
         font-size: 5vw;
     }
     .texto-info {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
-    .contact div h4 {
-        font-size: 4vw;
-    }
+
     .contact div p {
         font-size: 3.5vw;
     }
@@ -329,7 +416,10 @@ main {
         margin: 15% 10%;
     }
     .contact {
-        padding: 6%;
+        padding: 4%;
+    }
+    .galeria p {
+        font-size: 5vw;
     }
 }
 
@@ -364,9 +454,12 @@ main {
 */
 
 @keyframes colores {  
-    0% { color: #da251c; }
-     50% { color: #00ff6e;}
-     100% { color: #da251c;}
+    0% { color: #da251c;
+        box-shadow: 0px 0px 80px #da251c; }
+     50% { color: #00ff6e;
+        box-shadow: 0px 0px 80px #00ff6e;}
+     100% { color: #da251c;
+        box-shadow: 0px 0px 80px #da251c;}
 }
 
 @keyframes coloress {  
@@ -381,7 +474,7 @@ main {
      100% { color: #da251c;}
 }
 
-@-webkit-keyframes cambioborde {  
+@keyframes cambioborde {  
     0% { border: 2px solid #da251c; }
      50% { border: 2px solid #00ff6e;}
      100% { border: 2px solid #da251c;}
