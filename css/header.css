@@ -1,8 +1,10 @@
 .header {
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.87); /* Fondo semitransparente */
     backdrop-filter: blur(5px);
     backdrop-filter: opacity(0.5);
-    padding: 2vh 10vw;
+    padding: 1.5% 10% 1.5% 10%;
+
     display: flex;
 }
 
@@ -26,7 +28,7 @@ nav a {
     
 }
 nav a:hover {
-    color: white;
+    color: #00ff6e;
 }
 
 .redes {
@@ -88,16 +90,13 @@ nav a:hover {
         display: none;
         position: absolute;
         flex-direction: column;
-        top: 7vh;
+        top: 4rem;
         left: 0;
         width: 100%;
         text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Capa de degradado */
-                url('../navidad/fondo.webp');
-        background-attachment: fixed;
-        backdrop-filter: opacity(7.5);
+        background-color: black;
         justify-content: center;
-        height: 95vh;
+        height: 93vh;
         z-index: 100;
         
     }
@@ -113,10 +112,21 @@ nav a:hover {
 
 }
 
+@media all and (max-width:715px){
+    #menu {
+        top: 3.5rem;
+    }
+}
 
 @media all and (max-width:540px){
     nav a {
         padding: 7%;
+    }
+}
+
+@media all and (max-width:415px){
+    #menu {
+        top: 3rem;
     }
 }
 

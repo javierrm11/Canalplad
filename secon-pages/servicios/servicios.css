@@ -8,11 +8,8 @@
     box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
 }
 
-main {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Capa de degradado */
-                url(../../navidad/fondo.webp);
-    background-attachment: fixed;
-    backdrop-filter: opacity(7.5);
+.main {
+    background-color: #001f0f;
 }
 
 
@@ -20,9 +17,8 @@ main {
 .alert {
     margin: 4% 10%;
     padding: 3%;
-    background: url(../../navidad/fondo-servicios.webp);
-    background-size: cover;
-    box-shadow: 0px 0px 39px white;
+    border: 3px solid #00ff6e;
+    box-shadow: 0px 0px 10px white;
 }
 
 .alert h1{
@@ -44,12 +40,8 @@ section {
 /*Canalones main*/
 .canalones-main h2 {
     font-family: 'Jost';
+    color: white;
     font-size: 5vw;
-    background: url(../../navidad/fondogaleria.webp);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-position: center;
-    background-size: contain;
 }
 .img{
     width: 100%;
@@ -72,9 +64,6 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: .8vw;
     row-gap: 1.8rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), /* Capa de degradado */ url(../../navidad/h1-1.webp);
-    backdrop-filter: opacity(7.5);
-    background-position: bottom;
 }
 .imagenes-canalones img {
     width: 100%;
@@ -136,11 +125,6 @@ section {
     text-align: center;
     width: 100%;
     margin-bottom: 2%;
-    background: url(../../navidad/navidad-fondo-servicios.webp);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-position: center;
-    background-size: contain;
 
 }
 
@@ -240,11 +224,6 @@ section {
     font-family: 'Jost';
     color: white;
     font-size: 5vw;
-    background: url(../../navidad/fondogaleria.webp);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-position: center;
-    background-size: contain;
 }
 
 .ventajas p {
@@ -262,11 +241,6 @@ section {
     font-family: "Jost";
     margin-top: 8%;
     text-align: center;
-    background: url(../../navidad/navidad-fondo-servicios.webp);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-position: center;
-    background-size: contain;
 }
 .porque-pladur-div {
     display: flex;
@@ -281,11 +255,6 @@ section {
     margin: 2% 8%;
     padding: 1.5%;
     text-align: center;
-    background: url(../../navidad/fondo-1.webp);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-position: center;
-    background-size: contain;
     
 }
 
