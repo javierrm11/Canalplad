@@ -1,174 +1,429 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canalplad CORDOBA/ Instalación de Canalones y Pladur</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Canalplad Córdoba | Instalación de Canalones y Montaje de Pladur
+    </title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Canalplad Córdoba: expertos en instalación y limpieza de canalones de aluminio, techos y tabiquería de pladur. Trabajamos en toda la provincia de Córdoba."
+    />
+    <meta name="keywords" content="canalones Córdoba, pladur Córdoba, instalación canalones, montaje pladur, limpieza canalones, techos desmontables" />
+    <meta name="robots" content="index, follow" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+      property="og:title"
+      content="Canalplad Córdoba | Canalones y Pladur"
+    />
+    <meta
+      property="og:description"
+      content="Instalación de canalones y pladur en Córdoba y Andalucía. Calidad, rapidez y precios competitivos."
+    />
+    <meta property="og:image" content="./imagenes/logo.webp" />
+    <meta property="og:url" content="https://canalonescanalplad.es/" />
+    <meta property="og:type" content="website" />
 
-
-    <link rel="shortcut icon" href="./imagenes/logoico.ico"  type="image/x-icon">
-    <meta name="description" content="Empresa dedica a instalción de canalons
-    y montaje de pladur.">
-    <meta property="og:title" content="Canalplad Cordoba / ">
-    <meta property="og:description" content="Instalación de Canalones y Montaje de Pladur por toda Andalucia. Cordoba, Malaga, Granada, Sevilla">
-    <meta property="og:url" content="https://canalonescanalplad.es/">
-    <meta name="google-site-verification" content="6uLet-PpO1llj7ko3hXcGn0xrCUPwjuQ9_2l2ZKSGVM" />
-    <meta property="og:image" content="./imagenes/logo.ico">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Canalplad">
-    <script>
-        import { injectSpeedInsights } from '@vercel/speed-insights';
-
-        injectSpeedInsights();
+    <link rel="canonical" href="https://canalonescanalplad.es/" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./imagenes/logoico.ico" type="image/x-icon" />
+    <script src="./js/script.js" defer></script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/modal2.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/animation.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Canalplad Córdoba",
+        "description": "Instalación y limpieza de canalones de aluminio, techos y tabiquería de pladur en Córdoba y Andalucía.",
+        "image": "https://canalonescanalplad.es/imagenes/logo.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Villafranca de Córdoba",
+          "addressRegion": "Andalucía",
+          "addressCountry": "ES"
+        },
+        "url": "https://canalonescanalplad.es/",
+        "telephone": "+34 666 349 419",
+        "sameAs": [
+          "https://www.facebook.com/rafael.ruizocon.31",
+          "https://wa.me/34666349419"
+        ]
+      }
     </script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img
+          src="./imagenes/logo.webp"
+          alt="Logo Canalplad"
+          width="200"
+          height="60"
+        />
+      </a>
+      <nav id="menu" aria-label="Menú principal">
+        <a href="./index.html">Inicio</a>
+        <a href="./secon-pages/servicios/servicios.html">Servicios</a>
+        <a href="./secon-pages/sobre-nosotros/sobre-nosotros.html"
+          >Sobre Nosotros</a
+        >
+        <a href="./secon-pages/contacto/contacto.html">Contacto</a>
+      </nav>
+      <div class="redes">
+        <a
+          href="https://www.facebook.com/rafael.ruizocon.31"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="./imagenes/facebook-logo.webp"
+            alt="Facebook"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="https://wa.me/34666349419" target="_blank" rel="noopener">
+          <img
+            src="./imagenes/wassap.webp"
+            alt="WhatsApp"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+      <button
+        class="menu-toggle"
+        id="mostrar"
+        aria-label="Abrir menú de navegación"
+      >
+        <img
+          src="./imagenes/menu-logo.webp"
+          alt="Menú"
+          width="30"
+          height="30"
+        />
+      </button>
+    </header>
 
-    
-</head>
-<body>
     <main>
-        <div class="header">
-            <nav id="menu">
-                <a href="#" title="Página principal Canalplad">INICIO</a>
-                <a href="./secon-pages/servicios/servicios.html" title="Servicios que ofrecemos">SERVICIOS</a>
-                <a href="./secon-pages/sobre-nosotros/sobre-nosotros.html" title="Todo sobre Canalplad">SOBRE NOSOTROS</a>
-                <a href="./secon-pages/contacto/contacto.html" title="Contactanos">CONTACTO</a>
-            </nav>
-            <div class="redes">
-                <a href="https://www.facebook.com/rafael.ruizocon.31"><img src="./imagenes/facebook-logo.webp" alt=" logo facebook" width="30" height="30" title="Facebook de Rafael Ruiz"></a>
-                <a href="https://wa.me/34666349419"><img src="./imagenes/wassap.webp" alt="logo wathapp" width="30" height="30" title="Contactar a través de WhatsApp"></a>
-            </div>
-            <div class="responsive">
-                <img src="./imagenes/menu-logo.webp" width="30" height="30" alt="menu de navegación" srcset="" id="mostrar">
-            </div>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="titulo">
+          <h1>Canalones y Pladur en Córdoba</h1>
+          <p>
+            Más de 500 clientes confían en Canalplad. Calidad, rapidez y precios
+            económicos.
+          </p>
+        </div>
+        <div class="beneficios">
+          <article><h3>+500 clientes satisfechos</h3></article>
+          <article><h3>Precios competitivos</h3></article>
+          <article><h3>Material resistente y duradero</h3></article>
+          <article><h3>Instalación rápida</h3></article>
+        </div>
+      </section>
 
+      <!-- GALERÍA -->
+      <section class="galeria">
+        <h2>Galería de trabajos</h2>
+        <p>
+          Descubre algunos de nuestros proyectos realizados en Córdoba y
+          Andalucía.
+        </p>
+        <div class="imagen-container">
+          <img
+            src="./imagenes/canalones-cordoba-1.webp"
+            alt="canalon de aluminio en cordoba con 3 bajantes"
+            class="imagen"
+            width="800"
+            height="400"
+            loading="lazy"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-2.webp"
+            alt="canalon de aluminio con bajante"
+            class="imagen"
+            width="800"
+            height="400"
+            loading="lazy"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-3.webp"
+            alt="canalon de aluminio instalado con esquina"
+            class="imagen"
+            width="800"
+            height="400"
+            loading="lazy"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-4.webp"
+            alt="canalon instalado con varios trozos para cubir toda la casa"
+            class="imagen"
+            width="800"
+            height="400"
+            loading="lazy"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-5.webp"
+            alt="varios canalones de aluminio instalados con su bajante"
+            class="imagen"
+            width="800"
+            height="400"
+            loading="lazy"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-6.webp"
+            alt="canalon con esquina y bajante pegado a la pared"
+            class="imagen"
+            width="800"
+            height="400"
+            loading="lazy"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-7.webp"
+            alt="canalon de aluminio en cordoba con esquinas y su bajante para la bajada del agua"
+            loading="lazy imagen"
+            class="mas"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-8.webp"
+            alt="canalon de aluminio en varios troz por las esquinas de la casa"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-9.webp"
+            alt="parte de atras de la casa con su canalon y bajante"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-10.webp"
+            alt="canalon en 2º planta de casa en cordoba con su bajante hasta el suelo"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-11.webp"
+            alt="canalones cordoba"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-12.webp"
+            alt="canalon de aluminio en un patio rectangular y el agua entra por un tubo en la pared"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalones-cordoba-13.webp"
+            alt="canalon puesto en la parte lateral de la casa la cual dsiponecon un gran desnivel"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
             
+          />
+          <img
+            src="./imagenes/canalones-cordoba-14.webp"
+            alt="canalon puesto en los montes comunales"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"          />
+          <img
+            src="./imagenes/pladur-cordoba-15.webp"
+            alt="pladur puesto en una casa"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/pladur-cordoba-16.webp"
+            alt="pladur puesto en casa para añadir varias hyabitaciones más"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/pladur-cordoba-17.webp"
+            alt="techo de pladur puesto y un arreglo en la pared"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/pladur-cordoba-18.webp"
+            alt="pladur en cordoba"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalon-cordoba-19.webp"
+            alt="canalon en cordoba"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalon-cordoba-20.webp"
+            alt="canalon en cordoba pegado a piscina"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
+          <img
+            src="./imagenes/canalon-cordoba-21.webp"
+            alt="canalon azul en cordoba centro"
+            loading="lazy"
+            class="mas imagen"
+            width="800"
+            height="400"
+          />
         </div>
-        <div class="inicio">
-            <div class="titulo">
-                <img src="./imagenes/logo.webp" width="400" height="115" alt="Logo de Canalplad" srcset="" id="logo">
-                <h1>INSTALACIÓN DE CANALONES DE ALUMINIO Y MONTAJES DE PLADUR EN CÓRDOBA</h1>
-                
-            </div>
-            <div class="tarjet2">
-                
-                <div class="frase">
-                    <h3>+500 CLIENTES EN CÓRDOBA</h3>
-                </div>
-                <div class="frase">
-                    <h3>PRECIOS ECONÓMICOS</h3>
-                </div>
-                <div class="frase">
-                    <h3>MATERIAL DE CALIDAD Y RESISTENTE</h3>
-                </div>
-                <div class="frase">
-                    <h3>INSTALACIÓN RÁPIDA</h3>
-                </div>
-            </div>
-            <div class="galeria">
-                <h2>GALERIA</h2>
-                <p>¡Disfruta de algunos de los trabajos realizados!</p>
-                <div class="imagen-container">
-                    <img src="./imagenes/canalones-cordoba-1.webp"  alt="canalon de aluminio en cordoba con 3 bajantes" width="800" height="400"  loading="lazy" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-2.webp"  alt="canalon de aluminio con bajante" width="800" height="400"  loading="lazy" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-3.webp"  alt="canalon de aluminio instalado con esquina" width="800" height="400"  loading="lazy" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-4.webp"  alt="canalon instalado con varios trozos para cubir toda la casa" width="800" height="400"  loading="lazy" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-5.webp"  alt="varios canalones de aluminio instalados con su bajante" width="800" height="400"  loading="lazy" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-6.webp"  alt="canalon con esquina y bajante pegado a la pared" width="800" height="400"  loading="lazy" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-7.webp" alt="canalon de aluminio en cordoba con esquinas y su bajante para la bajada del agua" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-8.webp" alt="canalon de aluminio en varios troz por las esquinas de la casa" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-9.webp" alt="parte de atras de la casa con su canalon y bajante" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-10.webp" alt="canalon en 2º planta de casa en cordoba con su bajante hasta el suelo" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-11.webp" alt="canalones cordoba" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-12.webp" alt="canalon de aluminio en un patio rectangular y el agua entra por un tubo en la pared" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-13.webp" alt="canalon puesto en la parte lateral de la casa la cual dsiponecon un gran desnivel" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalones-cordoba-14.webp" alt="canalon puesto en los montes comunales" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/pladur-cordoba-15.webp" alt="pladur puesto en una casa" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/pladur-cordoba-16.webp" alt="pladur puesto en casa para añadir varias hyabitaciones más" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/pladur-cordoba-17.webp" alt="techo de pladur puesto y un arreglo en la pared" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/pladur-cordoba-18.webp" alt="pladur en cordoba" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalon-cordoba-19.webp" alt="canalon en cordoba" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalon-cordoba-20.webp" alt="canalon en cordoba pegado a piscina" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                    <img src="./imagenes/canalon-cordoba-21.webp" alt="canalon azul en cordoba centro" loading="lazy" class="mas" width="800" height="400" onclick="openModal(this)">
-                </div>
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="imgModal">
-                </div>
-                <button id="abrir-mas"> DESCÚBRELAS TODAS</button>
-                <script src="./js/script.js" ></script>
-            
-            
-            </div>
-            <p class="texto-info">
-                Empresa expertos en instalación y limpieza de canalones
-                y montajes de pladur en córdoba.
-                <br>
-                Utilizamos los mejores materiales del mercado
-                en relación a calidad/precio.
-            </p>
-            <div class="tarjet">
-                <h2>TRABAJOS QUE REALIZAMOS</h2>
-                <div class="trabajos">
-                    <h3>MONTAJE DE CANALONES DE ALUMINIO</h3>
-                    <h3>LIMPIEZA DE CANALONES</h3>
-                    <h3>MONTAJE DE TECHOS DE PLADUR</h3>
-                    <h3>TABIQUÉRIA DE PLADUR</h3>
-                    <h3>TECHOS DESMONTABLES</h3>
-                </div>
-                
-            </div>
-            
-            <div class="contact">
-                <div>
-                    <h4>Pide presupuesto sin compromiso</h4>
-                
-                    <p>Gran equipo de profesionales a tu 
-                        disposición en cualquier momento del día el cual se encargará de que su instalación se haga  lo más rápida posible.
-                    </p>
-                    </div>
-                <a href="./secon-pages/contacto/contacto.html">Contacta con nosotros</a>
-                
-            </div>  
+        <div id="myModal" class="modal">
+          <button
+            class="close"
+            onclick="closeModal()"
+            aria-label="Cerrar galería"
+          >
+            &times;
+          </button>
+          <img
+            class="modal-content"
+            id="imgModal"
+            alt="Vista ampliada de proyecto"
+          />
         </div>
-        
-        <footer class="footer">
-            <div class="footer-div">
-                <div class="footer-seccion">
-                    <h5>Secciones</h5>
-                    <a href="./index.html" title="Página principal Canalplad">Inicio</a>
-                    <a href="./secon-pages/servicios/servicios.html" title="Servicios que ofrecemos">Servicios</a>
-                    <a href="./secon-pages/sobre-nosotros/sobre-nosotros.html" title="Todo sobre Canalplad">Sobre Nosotros</a>
-                    <a href="./secon-pages/contacto/contacto.html" title="Contactanos">Contacto</a>
-                </div>
-                <div class="footer-seccion">
-                    <h5>Contáctanos</h5>
-                    <a href="./secon-pages/contacto/contacto.html" title="Contactame por correo">Correo</a>
-                    <a href="https://www.facebook.com/rafael.ruizocon.31" title="Contactame por facebook">Facebook</a>
-                    <a href="https://wa.me/34666349419" title="Contactame por whatsap">Whatsap</a>
-                </div>
-                <div class="footer-seccion canal">
-                    <h5>Canalplad</h5>
-                    <p>Empresa dedicada a la instalcion y montaje de canalones y pladur
-                        situada en Villafranca de Córdoba y trabajamos en la provincia de Córdoba
-                    </p>
-                </div>
-            </div>
-            <div class="footer-mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.23036425180425!2d-4.5503403699738625!3d37.95745369915923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cfd1cba035aed%3A0x5672081443b3db46!2sCanalplad!5e0!3m2!1ses!2ses!4v1695136063789!5m2!1ses!2ses" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Google" loading="lazy">
-                </iframe>
-            </div>
-        
-        </footer>
-        <h6 class="copy">@ CANALPLAD 2023 | Todos los derechos reservados</h6>
-        
-        
-        <script src="./js/menu.js" async></script>
-        <script src="./js/modal.js" async></script>
-    </body>
+        <button id="abrir-mas">Ver más proyectos</button>
+      </section>
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal" title="Cerrar imagen">
+    </div>
+
+      <!-- INFO -->
+      <section class="texto-info">
+        <p>
+          Somos expertos en
+          <strong>instalación y limpieza de canalones de aluminio</strong>, así
+          como en <strong>montaje de pladur</strong> en Córdoba y Andalucía.
+          Utilizamos siempre materiales de la mejor calidad con una excelente
+          relación calidad-precio.
+        </p>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section class="servicios">
+        <h2>Servicios que ofrecemos</h2>
+        <ul class="lista-servicios">
+          <li>Montaje de canalones de aluminio</li>
+          <li>Limpieza de canalones</li>
+          <li>Montaje de techos de pladur</li>
+          <li>Tabiquería de pladur</li>
+          <li>Techos desmontables</li>
+        </ul>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="contact">
+        <h2>Solicita tu presupuesto</h2>
+        <p>
+          Nuestro equipo de profesionales está disponible para ofrecerte un
+          servicio rápido, eficaz y con total garantía.
+        </p>
+        <a href="./secon-pages/contacto/contacto.html" class="btn-contacto"
+          >Contacta con nosotros</a
+        >
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-div">
+        <div class="footer-seccion">
+          <h5>Secciones</h5>
+          <a href="./index.html" title="Página principal Canalplad">Inicio</a>
+          <a
+            href="./secon-pages/servicios/servicios.html"
+            title="Servicios que ofrecemos"
+            >Servicios</a
+          >
+          <a
+            href="./secon-pages/sobre-nosotros/sobre-nosotros.html"
+            title="Todo sobre Canalplad"
+            >Sobre Nosotros</a
+          >
+          <a href="./secon-pages/contacto/contacto.html" title="Contactanos"
+            >Contacto</a
+          >
+        </div>
+        <div class="footer-seccion">
+          <h5>Contáctanos</h5>
+          <a
+            href="./secon-pages/contacto/contacto.html"
+            title="Contactame por correo"
+            >Correo</a
+          >
+          <a
+            href="https://www.facebook.com/rafael.ruizocon.31"
+            title="Contactame por facebook"
+            >Facebook</a
+          >
+          <a href="https://wa.me/34666349419" title="Contactame por whatsap"
+            >WhatsApp</a
+          >
+        </div>
+        <div class="footer-seccion canal">
+          <h5>Canalplad</h5>
+          <p>
+            Empresa dedicada a la instalación y montaje de canalones y pladur,
+            situada en Villafranca de Córdoba. Trabajamos por toda Andalucía con
+            profesionalidad y calidad garantizada.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.23036425180425!2d-4.5503403699738625!3d37.95745369915923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cfd1cba035aed%3A0x5672081443b3db46!2sCanalplad!5e0!3m2!1ses!2ses!4v1695136063789!5m2!1ses!2ses"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Canalplad en Google Maps"
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2023 Canalplad - Todos los derechos reservados</p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentSlide = 0;
         const slides = carrusel.querySelectorAll('.imagen-canalon, .imagen-pladur');
         const totalSlides = slides.length;
-        const botonesContainer = carrusel.querySelector('.botones');
         let autoSlideInterval;
 
         function showSlide(index) {
@@ -20,19 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
             slides.forEach(slide => {
                 slide.style.transform = `translateX(${offset}%)`;
             });
-
-            carrusel.querySelectorAll('.boton').forEach((btn, idx) => {
-                btn.classList.toggle('active', idx === currentSlide);
-            });
-        }
-
-        // Crear botones para el carrusel
-        for (let i = 0; i < totalSlides; i++) {
-            const button = document.createElement('button');
-            button.classList.add('boton');
-            if (i === 0) button.classList.add('active');
-            button.addEventListener('click', () => showSlide(i));
-            botonesContainer.appendChild(button);
         }
 
         // Añadir funcionalidad a los botones de navegación

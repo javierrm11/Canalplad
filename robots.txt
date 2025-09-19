@@ -1,4 +1,6 @@
+# General rules for all user agents
 User-agent: *
+# Disallow access to sensitive WordPress directories
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /wp-content/plugins/
@@ -8,10 +10,18 @@ Disallow: /cgi-bin/
 Disallow: /xmlrpc.php
 Disallow: /?s=*
 
-# Allow access to CSS, JS, and images
+# Allow access to essential assets (CSS, JS, images)
 Allow: /wp-content/uploads/
 Allow: /wp-content/themes/*.css
 Allow: /wp-content/themes/*.js
+
+# Block access to specific file types (e.g., .sql, .zip, .env)
+Disallow: /*.sql$
+Disallow: /*.zip$
+Disallow: /*.env$
+
+# Block access to URLs with query parameters (optional, for cleaner indexing)
+Disallow: /*?*
 
 # Sitemap location
 Sitemap: https://canalonescanalplad.es/sitemap.xml
