@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0e0e0e}
+  ::placeholder{color:#9a9a9a}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Barlow',sans-serif;background:#fff">
+
+  <dc-import name="Nav" hint-size="100%,68px"></dc-import>
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative;background:#0e0e0e;color:#fff;overflow:hidden">
+    <image-slot id="home_hero" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="Arrastra aquí una foto de un canalón instalado (fondo)"></image-slot>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,.82) 0%,rgba(8,8,8,.5) 45%,rgba(8,8,8,.92) 100%);pointer-events:none"></div>
+    <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,96px) clamp(18px,5vw,32px) 120px">
+      <div style="display:inline-block;background:#e2231a;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;margin-bottom:26px">Canalones de aluminio · Pladur · Córdoba</div>
+      <h1 style="font-family:'Anton',sans-serif;font-size:clamp(38px,8.5vw,84px);line-height:.95;font-weight:400;margin:0 0 24px;text-transform:uppercase;letter-spacing:-.01em;max-width:900px;font-style:italic">Canalones que duran<br><span style="color:#22c24a">toda la vida</span></h1>
+      <p style="font-size:21px;line-height:1.5;color:rgba(255,255,255,.85);margin:0 0 38px;max-width:620px;font-weight:500">Instalación, limpieza y reparación de canalones de aluminio y trabajos de pladur en Córdoba y toda Andalucía. Más de 500 hogares ya confían en nosotros.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <a href="#presupuesto" style="background:#15a53c;color:#fff;padding:18px 34px;font-size:17px;font-weight:700;letter-spacing:.02em;text-decoration:none;display:inline-flex;align-items:center;gap:10px" style-hover="background:#18bf45">PEDIR PRESUPUESTO GRATIS →</a>
+        <a href="tel:+34666349419" style="border:2px solid rgba(255,255,255,.4);color:#fff;padding:16px 30px;font-size:17px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:10px" style-hover="border-color:#22c24a;color:#22c24a">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          LLÁMANOS AHORA
+        </a>
+      </div>
+    </div>
+    <!-- trust strip -->
+    <div style="position:relative;z-index:2;background:#15a53c;color:#fff">
+      <div style="max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:.05em;text-transform:uppercase">
+        <span>+500 clientes satisfechos</span>
+        <span style="opacity:.5">·</span>
+        <span>Presupuesto sin compromiso</span>
+        <span style="opacity:.5">·</span>
+        <span>Garantía total</span>
+        <span style="opacity:.5">·</span>
+        <span>Respuesta en 24-48h</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section style="background:#fff;padding:clamp(56px,9vw,96px) clamp(18px,5vw,32px)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:56px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#15a53c;font-weight:700;margin-bottom:14px">Nuestros servicios</div>
+        <h2 style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.6vw,48px);line-height:1.05;color:#141414;margin:0;text-transform:uppercase;font-style:italic">Canalones y pladur en Córdoba</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+
+        <div style="background:#fff;border:1px solid #e7e7e3;border-radius:10px;padding:34px 30px;transition:all .2s" style-hover="border-color:#15a53c;box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-4px)">
+          <div style="width:54px;height:54px;border-radius:10px;background:#eafaef;display:flex;align-items:center;justify-content:center;margin-bottom:22px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18l-1.5 4.5a4 4 0 0 1-3.8 2.7H8.3a4 4 0 0 1-3.8-2.7L3 8z"></path><path d="M7 8V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"></path><path d="M12 15v6"></path></svg>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Montaje de canalones de aluminio</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Instalación de canalones de aluminio a medida, resistentes y duraderos, para proteger tu fachada de la lluvia.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e7e7e3;border-radius:10px;padding:34px 30px;transition:all .2s" style-hover="border-color:#15a53c;box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-4px)">
+          <div style="width:54px;height:54px;border-radius:10px;background:#eafaef;display:flex;align-items:center;justify-content:center;margin-bottom:22px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3l-7 7"></path><path d="M14 5l5 5"></path><path d="M8 12l-4 9 9-4"></path><path d="M12 16l-4-4"></path></svg>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Limpieza de canalones</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Eliminamos hojas, suciedad y obstrucciones para que el agua circule y evitar humedades y desbordamientos.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e7e7e3;border-radius:10px;padding:34px 30px;transition:all .2s" style-hover="border-color:#15a53c;box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-4px)">
+          <div style="width:54px;height:54px;border-radius:10px;background:#eafaef;display:flex;align-items:center;justify-content:center;margin-bottom:22px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2.2-2.2 2.8-2.8z"></path></svg>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Reparación y mantenimiento</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Arreglamos fugas, juntas y bajantes dañados. Mantenimiento periódico para alargar la vida de tu instalación.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e7e7e3;border-radius:10px;padding:34px 30px;transition:all .2s" style-hover="border-color:#15a53c;box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-4px)">
+          <div style="width:54px;height:54px;border-radius:10px;background:#eafaef;display:flex;align-items:center;justify-content:center;margin-bottom:22px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5"></rect><path d="M5 9v11"></path><path d="M19 9v11"></path><path d="M9 9v11"></path><path d="M15 9v11"></path></svg>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Techos de pladur</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Montaje de techos de pladur lisos o con diseño, con perfecto acabado y aislamiento para tu hogar o local.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e7e7e3;border-radius:10px;padding:34px 30px;transition:all .2s" style-hover="border-color:#15a53c;box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-4px)">
+          <div style="width:54px;height:54px;border-radius:10px;background:#eafaef;display:flex;align-items:center;justify-content:center;margin-bottom:22px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"></rect><path d="M3 9h18"></path><path d="M9 9v12"></path><path d="M15 3v6"></path></svg>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Tabiquería de pladur</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Creamos nuevas habitaciones y divisiones con tabiques de pladur: rápido, limpio y con gran aislamiento.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e7e7e3;border-radius:10px;padding:34px 30px;transition:all .2s" style-hover="border-color:#15a53c;box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-4px)">
+          <div style="width:54px;height:54px;border-radius:10px;background:#eafaef;display:flex;align-items:center;justify-content:center;margin-bottom:22px">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 10h18"></path><path d="M3 15h18"></path><path d="M9 5v14"></path><path d="M15 5v14"></path></svg>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Techos desmontables</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Instalación de techos registrables para oficinas y locales, con fácil acceso a instalaciones y mantenimiento.</p>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:48px">
+        <a href="Servicios.dc.html" style="display:inline-flex;align-items:center;gap:10px;color:#15a53c;font-weight:700;font-size:16px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase" style-hover="gap:16px">Ver todos los servicios en detalle →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POR QUÉ ELEGIRNOS (dark band) ===== -->
+  <section style="background:#0e0e0e;color:#fff;padding:clamp(54px,8vw,90px) clamp(18px,5vw,32px);position:relative;overflow:hidden">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);align-items:center">
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#22c24a;font-weight:700;margin-bottom:14px">Por qué elegirnos</div>
+        <h2 style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.2vw,46px);line-height:1.05;margin:0 0 22px;text-transform:uppercase;font-style:italic">El oficio bien hecho marca la diferencia</h2>
+        <p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,.75);margin:0 0 32px">En Canalplad llevamos más de 15 años instalando canalones y pladur en Córdoba con materiales de primera calidad y un trato cercano. Cumplimos los plazos, dejamos la obra limpia y respondemos por nuestro trabajo.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#22c24a;font-size:20px;line-height:1">✓</span><span style="font-size:16px;font-weight:600">Materiales de primera calidad</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#22c24a;font-size:20px;line-height:1">✓</span><span style="font-size:16px;font-weight:600">Presupuesto gratis y sin compromiso</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#22c24a;font-size:20px;line-height:1">✓</span><span style="font-size:16px;font-weight:600">Trabajo garantizado</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#22c24a;font-size:20px;line-height:1">✓</span><span style="font-size:16px;font-weight:600">Rapidez y limpieza</span></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div style="background:#181818;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:30px 26px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.2vw,46px);color:#22c24a;font-style:italic;line-height:1">+500</div>
+          <div style="font-size:15px;color:rgba(255,255,255,.7);margin-top:6px">clientes satisfechos en Córdoba y provincia</div>
+        </div>
+        <div style="background:#181818;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:30px 26px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.2vw,46px);color:#22c24a;font-style:italic;line-height:1">15+</div>
+          <div style="font-size:15px;color:rgba(255,255,255,.7);margin-top:6px">años de experiencia en el oficio</div>
+        </div>
+        <div style="background:#181818;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:30px 26px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.2vw,46px);color:#22c24a;font-style:italic;line-height:1">24-48h</div>
+          <div style="font-size:15px;color:rgba(255,255,255,.7);margin-top:6px">de respuesta a tu solicitud</div>
+        </div>
+        <div style="background:#181818;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:30px 26px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.2vw,46px);color:#22c24a;font-style:italic;line-height:1">100%</div>
+          <div style="font-size:15px;color:rgba(255,255,255,.7);margin-top:6px">trabajos con garantía</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section style="background:#f5f6f4;padding:clamp(56px,9vw,96px) clamp(18px,5vw,32px)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:56px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#15a53c;font-weight:700;margin-bottom:14px">Trabajos realizados</div>
+        <h2 style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.6vw,48px);line-height:1.05;color:#141414;margin:0 0 14px;text-transform:uppercase;font-style:italic">Nuestros proyectos en Córdoba</h2>
+        <p style="font-size:18px;color:#5c5c58;margin:0;max-width:600px;margin:0 auto">Arrastra tus fotos sobre cada recuadro para mostrar tus trabajos reales de canalones y pladur.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));grid-auto-rows:200px;gap:16px">
+        <image-slot id="g1" style="width:100%;height:100%;grid-row:span 2" shape="rounded" radius="12" placeholder="Foto 1"></image-slot>
+        <image-slot id="g2" style="width:100%;height:100%" shape="rounded" radius="12" placeholder="Foto 2"></image-slot>
+        <image-slot id="g3" style="width:100%;height:100%" shape="rounded" radius="12" placeholder="Foto 3"></image-slot>
+        <image-slot id="g4" style="width:100%;height:100%;grid-row:span 2" shape="rounded" radius="12" placeholder="Foto 4"></image-slot>
+        <image-slot id="g5" style="width:100%;height:100%" shape="rounded" radius="12" placeholder="Foto 5"></image-slot>
+        <image-slot id="g6" style="width:100%;height:100%" shape="rounded" radius="12" placeholder="Foto 6"></image-slot>
+        <image-slot id="g7" style="width:100%;height:100%" shape="rounded" radius="12" placeholder="Foto 7"></image-slot>
+        <image-slot id="g8" style="width:100%;height:100%" shape="rounded" radius="12" placeholder="Foto 8"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO ===== -->
+  <section style="background:#fff;padding:clamp(56px,9vw,96px) clamp(18px,5vw,32px)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:56px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#15a53c;font-weight:700;margin-bottom:14px">Cómo trabajamos</div>
+        <h2 style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.6vw,48px);line-height:1.05;color:#141414;margin:0;text-transform:uppercase;font-style:italic">Así de fácil, en 3 pasos</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px">
+        <div style="text-align:center;padding:0 16px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(24px,4vw,34px);color:#fff;background:#15a53c;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-style:italic">1</div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Cuéntanos qué necesitas</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Llámanos o escríbenos por WhatsApp. Te escuchamos y resolvemos tus dudas sin compromiso.</p>
+        </div>
+        <div style="text-align:center;padding:0 16px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(24px,4vw,34px);color:#fff;background:#15a53c;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-style:italic">2</div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Presupuesto sin compromiso</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Valoramos el trabajo y te damos un presupuesto claro, sin sorpresas ni letra pequeña.</p>
+        </div>
+        <div style="text-align:center;padding:0 16px">
+          <div style="font-family:'Anton',sans-serif;font-size:clamp(24px,4vw,34px);color:#fff;background:#15a53c;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-style:italic">3</div>
+          <h3 style="font-size:21px;font-weight:700;color:#141414;margin:0 0 10px">Instalación garantizada</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5c5c58;margin:0">Realizamos el trabajo con rapidez y lo dejamos todo limpio. Con garantía y a tu entera satisfacción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEÑAS ===== -->
+  <section style="background:#f5f6f4;padding:clamp(56px,9vw,96px) clamp(18px,5vw,32px)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:56px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#15a53c;font-weight:700;margin-bottom:14px">Opiniones de clientes</div>
+        <h2 style="font-family:'Anton',sans-serif;font-size:clamp(28px,5.6vw,48px);line-height:1.05;color:#141414;margin:0;text-transform:uppercase;font-style:italic">Lo que dicen de nosotros</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+        <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.04)">
+          <div style="color:#f5a623;font-size:18px;margin-bottom:14px">★★★★★</div>
+          <p style="font-size:16px;line-height:1.6;color:#33332f;margin:0 0 20px">"Instalaron los canalones de mi casa en un día. Trabajo impecable y muy buen precio. Se acabaron las goteras."</p>
+          <div style="font-weight:700;color:#141414">Antonio R.</div>
+          <div style="font-size:14px;color:#8a8a85">Córdoba</div>
+        </div>
+        <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.04)">
+          <div style="color:#f5a623;font-size:18px;margin-bottom:14px">★★★★★</div>
+          <p style="font-size:16px;line-height:1.6;color:#33332f;margin:0 0 20px">"Nos hicieron el techo de pladur del salón y dos habitaciones. Rápidos, limpios y muy profesionales. Repetiremos."</p>
+          <div style="font-weight:700;color:#141414">María José L.</div>
+          <div style="font-size:14px;color:#8a8a85">Villafranca de Córdoba</div>
+        </div>
+        <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.04)">
+          <div style="color:#f5a623;font-size:18px;margin-bottom:14px">★★★★★</div>
+          <p style="font-size:16px;line-height:1.6;color:#33332f;margin:0 0 20px">"Vinieron a limpiar y reparar los canalones de la comunidad. Serios y cumplidores. Totalmente recomendables."</p>
+          <div style="font-weight:700;color:#141414">Francisco M.</div>
+          <div style="font-size:14px;color:#8a8a85">Córdoba</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ZONA DE TRABAJO ===== -->
+  <section style="background:#fff;padding:clamp(54px,8vw,90px) clamp(18px,5vw,32px)">
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#15a53c;font-weight:700;margin-bottom:14px">Zona de trabajo</div>
+      <h2 style="font-family:'Anton',sans-serif;font-size:clamp(26px,5vw,42px);line-height:1.05;color:#141414;margin:0 0 18px;text-transform:uppercase;font-style:italic">Canalones y pladur en toda Córdoba y Andalucía</h2>
+      <p style="font-size:18px;color:#5c5c58;margin:0 auto 36px;max-width:680px;line-height:1.6">Con base en Villafranca de Córdoba, trabajamos en Córdoba capital y provincia y nos desplazamos por toda Andalucía.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:900px;margin:0 auto">
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Córdoba capital</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Villafranca de Córdoba</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">El Carpio</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Montoro</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Adamuz</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Bujalance</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Pedro Abad</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Almodóvar del Río</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Sevilla</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Jaén</span>
+        <span style="background:#f0f1ee;color:#33332f;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600">Y toda Andalucía</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA + FORMULARIO ===== -->
+  <section id="presupuesto" style="background:#0e0e0e;color:#fff;padding:clamp(56px,9vw,96px) clamp(18px,5vw,32px)">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);align-items:center">
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#22c24a;font-weight:700;margin-bottom:14px">Pide tu presupuesto</div>
+        <h2 style="font-family:'Anton',sans-serif;font-size:clamp(30px,6vw,50px);line-height:1.02;margin:0 0 22px;text-transform:uppercase;font-style:italic">Solicita presupuesto gratis hoy mismo</h2>
+        <p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,.75);margin:0 0 34px">Rellena el formulario y te respondemos en 24-48h, o llámanos directamente. Sin compromiso.</p>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <a href="tel:+34666349419" style="display:flex;align-items:center;gap:16px;text-decoration:none;color:#fff">
+            <span style="width:50px;height:50px;border-radius:10px;background:#15a53c;display:flex;align-items:center;justify-content:center;flex:none">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            <span><span style="display:block;font-size:13px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.08em">Llámanos</span><span style="font-size:22px;font-weight:700">666 34 94 19</span></span>
+          </a>
+          <a href="https://wa.me/34666349419" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:16px;text-decoration:none;color:#fff">
+            <span style="width:50px;height:50px;border-radius:10px;background:#25d366;display:flex;align-items:center;justify-content:center;flex:none">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.3A10 10 0 1 0 12 2z"></path></svg>
+            </span>
+            <span><span style="display:block;font-size:13px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.08em">WhatsApp</span><span style="font-size:22px;font-weight:700">Escríbenos ahora</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:16px;padding:40px">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:30px 10px">
+            <div style="width:64px;height:64px;border-radius:50%;background:#eafaef;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#15a53c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            </div>
+            <h3 style="font-size:24px;color:#141414;margin:0 0 10px;font-weight:700">¡Solicitud enviada!</h3>
+            <p style="font-size:16px;color:#5c5c58;line-height:1.6;margin:0">Se ha abierto WhatsApp para enviarnos tu mensaje. Te responderemos lo antes posible.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <h3 style="font-size:24px;color:#141414;margin:0 0 6px;font-weight:700;font-family:'Barlow',sans-serif">Solicita tu presupuesto</h3>
+          <p style="font-size:15px;color:#8a8a85;margin:0 0 24px">Te contactamos en 24-48h</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <input value="{{ nombre }}" onInput="{{ setNombre }}" placeholder="Tu nombre*" style="width:100%;padding:14px 16px;border:1px solid #dcdcd6;border-radius:8px;font-size:16px;font-family:'Barlow',sans-serif;color:#141414;outline:none" style-focus="border-color:#15a53c">
+            <input value="{{ telefono }}" onInput="{{ setTelefono }}" placeholder="Tu teléfono*" style="width:100%;padding:14px 16px;border:1px solid #dcdcd6;border-radius:8px;font-size:16px;font-family:'Barlow',sans-serif;color:#141414;outline:none" style-focus="border-color:#15a53c">
+            <input value="{{ poblacion }}" onInput="{{ setPoblacion }}" placeholder="Población" style="width:100%;padding:14px 16px;border:1px solid #dcdcd6;border-radius:8px;font-size:16px;font-family:'Barlow',sans-serif;color:#141414;outline:none" style-focus="border-color:#15a53c">
+            <select value="{{ servicio }}" onChange="{{ setServicio }}" style="width:100%;padding:14px 16px;border:1px solid #dcdcd6;border-radius:8px;font-size:16px;font-family:'Barlow',sans-serif;color:#141414;outline:none;background:#fff" style-focus="border-color:#15a53c">
+              <option>Montaje de canalones de aluminio</option>
+              <option>Limpieza de canalones</option>
+              <option>Reparación y mantenimiento</option>
+              <option>Techos de pladur</option>
+              <option>Tabiquería de pladur</option>
+              <option>Techos desmontables</option>
+              <option>Otro / no estoy seguro</option>
+            </select>
+            <textarea value="{{ mensaje }}" onInput="{{ setMensaje }}" placeholder="Cuéntanos brevemente tu proyecto" rows="3" style="width:100%;padding:14px 16px;border:1px solid #dcdcd6;border-radius:8px;font-size:16px;font-family:'Barlow',sans-serif;color:#141414;outline:none;resize:vertical" style-focus="border-color:#15a53c"></textarea>
+            <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+              <div style="color:#e2231a;font-size:14px;font-weight:600">{{ error }}</div>
+            </sc-if>
+            <button onClick="{{ enviar }}" style="width:100%;background:#15a53c;color:#fff;border:none;padding:17px;border-radius:8px;font-size:17px;font-weight:700;cursor:pointer;font-family:'Barlow',sans-serif;letter-spacing:.02em" style-hover="background:#18bf45">ENVIAR POR WHATSAPP →</button>
+            <p style="font-size:12px;color:#a0a09a;text-align:center;margin:2px 0 0;line-height:1.5">Al enviar se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+          </div>
+        </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,480px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { nombre:'', telefono:'', poblacion:'', servicio:'Montaje de canalones de aluminio', mensaje:'', sent:false, error:'' };
+  set(k){ return (e)=> this.setState({ [k]: e.target.value, error:'' }); }
+  renderVals(){
+    const enviar = () => {
+      const { nombre, telefono, poblacion, servicio, mensaje } = this.state;
+      if(!nombre.trim() || !telefono.trim()){
+        this.setState({ error:'Por favor, indícanos tu nombre y teléfono.' });
+        return;
+      }
+      let txt = 'Hola, soy ' + nombre + '. Me gustaría un presupuesto de: ' + servicio + '.';
+      if(poblacion.trim()) txt += ' Población: ' + poblacion + '.';
+      if(mensaje.trim()) txt += ' ' + mensaje;
+      txt += ' Mi teléfono de contacto: ' + telefono + '.';
+      window.open('https://wa.me/34666349419?text=' + encodeURIComponent(txt), '_blank');
+      this.setState({ sent:true });
+    };
+    return {
+      nombre:this.state.nombre, telefono:this.state.telefono, poblacion:this.state.poblacion,
+      servicio:this.state.servicio, mensaje:this.state.mensaje,
+      sent:this.state.sent, notSent:!this.state.sent,
+      error:this.state.error, hasError:!!this.state.error,
+      setNombre:this.set('nombre'), setTelefono:this.set('telefono'), setPoblacion:this.set('poblacion'),
+      setServicio:this.set('servicio'), setMensaje:this.set('mensaje'), enviar
+    };
+  }
+}
+</script>
+</body>
+</html>
