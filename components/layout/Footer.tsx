@@ -21,8 +21,8 @@ export default function Footer() {
   return (
     <footer className="bg-ink font-barlow text-white">
       <div className="mx-auto max-w-[1200px] px-4 pt-11 sm:px-6 sm:pt-12 md:px-8 md:pt-16">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-7 sm:gap-10 md:gap-12">
-          <div>
+        <div className="grid grid-cols-2 gap-7 sm:grid-cols-[repeat(auto-fit,minmax(170px,1fr))] sm:gap-10 md:gap-12">
+          <div className="col-span-2 sm:col-span-1">
             <Image
               src={LOGO_SRC}
               alt="Canalplad — Canalones y Pladur en Córdoba"
@@ -89,7 +89,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <h3 className="mb-[18px] font-barlow-condensed text-sm font-bold uppercase tracking-[0.1em] text-brand-bright">
               Contacto
             </h3>
