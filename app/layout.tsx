@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE_URL } from "@/lib/site";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 import "./globals.css";
 
 const anton = Anton({
@@ -48,6 +49,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsAppFloatingButton />
         <SpeedInsights />
       </body>
     </html>

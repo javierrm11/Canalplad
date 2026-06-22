@@ -109,7 +109,29 @@ export default function ServiciosGrid() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+        {/* mobile: compact scannable rows, no hidden content */}
+        <div className="flex flex-col gap-3 sm:hidden">
+          {SERVICIOS.map((servicio) => (
+            <div
+              key={servicio.title}
+              className="flex gap-4 rounded-[10px] border border-ink-line bg-white p-4"
+            >
+              <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-[#eafaef]">
+                {servicio.icon}
+              </div>
+              <div>
+                <h3 className="mb-1 text-base font-bold text-ink-soft">
+                  {servicio.title}
+                </h3>
+                <p className="m-0 text-sm leading-[1.5] text-ink-faint">
+                  {servicio.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 sm:grid">
           {SERVICIOS.map((servicio) => (
             <div
               key={servicio.title}

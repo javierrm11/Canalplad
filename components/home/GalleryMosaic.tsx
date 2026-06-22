@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { GALLERY_PHOTOS } from "@/lib/home-data";
+import GalleryCarousel from "./GalleryCarousel";
 
 export default function GalleryMosaic() {
   return (
@@ -18,7 +19,11 @@ export default function GalleryMosaic() {
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] auto-rows-[200px] gap-4">
+        <div className="sm:hidden">
+          <GalleryCarousel />
+        </div>
+
+        <div className="hidden grid-cols-[repeat(auto-fit,minmax(260px,1fr))] auto-rows-[200px] gap-4 sm:grid">
           {GALLERY_PHOTOS.map((photo) => (
             <div
               key={photo.src}
@@ -31,7 +36,7 @@ export default function GalleryMosaic() {
                 alt={photo.alt}
                 fill
                 loading="lazy"
-                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                sizes="(min-width: 1024px) 25vw, 33vw"
                 className="object-cover"
               />
             </div>
