@@ -67,7 +67,29 @@ export default function Valores() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6">
+        {/* mobile: compact scannable rows */}
+        <div className="flex flex-col gap-3 sm:hidden">
+          {VALORES.map((valor) => (
+            <div
+              key={valor.title}
+              className="flex gap-4 rounded-xl bg-white p-4"
+            >
+              <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-[#eafaef]">
+                {valor.icon}
+              </div>
+              <div>
+                <h3 className="mb-1 text-base font-bold text-ink-soft">
+                  {valor.title}
+                </h3>
+                <p className="m-0 text-sm leading-[1.5] text-ink-faint">
+                  {valor.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6 sm:grid">
           {VALORES.map((valor) => (
             <div key={valor.title} className="rounded-xl bg-white p-8">
               <div className="mb-[18px] flex h-[50px] w-[50px] items-center justify-center rounded-[10px] bg-[#eafaef]">

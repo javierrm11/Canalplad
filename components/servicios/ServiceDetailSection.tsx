@@ -43,7 +43,7 @@ export default function ServiceDetailSection({
   );
 
   const photo = (
-    <div className="relative h-[380px] w-full overflow-hidden rounded-2xl">
+    <div className="relative h-[260px] w-full overflow-hidden rounded-2xl sm:h-[380px]">
       <Image
         src={service.image.src}
         alt={service.image.alt}
@@ -57,20 +57,12 @@ export default function ServiceDetailSection({
 
   return (
     <section
-      className={`${bgClass} px-4 py-[50px] font-barlow sm:px-6 sm:py-16 md:px-8 md:py-20`}
+      id={service.slug}
+      className={`${bgClass} scroll-mt-20 px-4 py-[50px] font-barlow sm:px-6 sm:py-16 md:px-8 md:py-20`}
     >
       <div className="mx-auto grid max-w-[1100px] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center gap-[30px] sm:gap-10 md:gap-14">
-        {reverse ? (
-          <>
-            {photo}
-            {text}
-          </>
-        ) : (
-          <>
-            {text}
-            {photo}
-          </>
-        )}
+        <div className={reverse ? "sm:order-2" : "sm:order-1"}>{text}</div>
+        <div className={reverse ? "sm:order-1" : "sm:order-2"}>{photo}</div>
       </div>
     </section>
   );

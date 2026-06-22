@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/layout/PageHeader";
+import ServiciosQuickNav from "@/components/servicios/ServiciosQuickNav";
 import ServiceDetailSection from "@/components/servicios/ServiceDetailSection";
 import CtaBand from "@/components/layout/CtaBand";
 import { SERVICES_DETAIL } from "@/lib/services-data";
@@ -21,6 +22,8 @@ export default function ServiciosPage() {
         title="Todo en canalones y pladur en Córdoba"
         description="Instalamos, limpiamos y reparamos canalones de aluminio y realizamos todo tipo de trabajos de pladur. Materiales de primera y garantía en cada proyecto."
       />
+
+      <ServiciosQuickNav />
 
       {SERVICES_DETAIL.map((service, i) => (
         <ServiceDetailSection

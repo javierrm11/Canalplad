@@ -1,4 +1,6 @@
 export interface ServiceDetail {
+  slug: string;
+  shortLabel: string;
   index: string;
   title: string;
   description: string;
@@ -9,6 +11,8 @@ export interface ServiceDetail {
 
 export const SERVICES_DETAIL: ServiceDetail[] = [
   {
+    slug: "canalones-aluminio",
+    shortLabel: "Canalones",
     index: "01 · Canalones",
     title: "Montaje de canalones de aluminio",
     description:
@@ -25,6 +29,8 @@ export const SERVICES_DETAIL: ServiceDetail[] = [
     bg: "white",
   },
   {
+    slug: "limpieza-canalones",
+    shortLabel: "Limpieza",
     index: "02 · Canalones",
     title: "Limpieza de canalones",
     description:
@@ -41,6 +47,8 @@ export const SERVICES_DETAIL: ServiceDetail[] = [
     bg: "soft",
   },
   {
+    slug: "reparacion-mantenimiento",
+    shortLabel: "Reparación",
     index: "03 · Canalones",
     title: "Reparación y mantenimiento",
     description:
@@ -57,6 +65,8 @@ export const SERVICES_DETAIL: ServiceDetail[] = [
     bg: "white",
   },
   {
+    slug: "techos-pladur",
+    shortLabel: "Techos pladur",
     index: "04 · Pladur",
     title: "Techos de pladur",
     description:
@@ -73,6 +83,8 @@ export const SERVICES_DETAIL: ServiceDetail[] = [
     bg: "soft",
   },
   {
+    slug: "tabiqueria-pladur",
+    shortLabel: "Tabiquería",
     index: "05 · Pladur",
     title: "Tabiquería de pladur",
     description:
@@ -89,6 +101,8 @@ export const SERVICES_DETAIL: ServiceDetail[] = [
     bg: "white",
   },
   {
+    slug: "techos-desmontables",
+    shortLabel: "Techos desmontables",
     index: "06 · Pladur",
     title: "Techos desmontables",
     description:
