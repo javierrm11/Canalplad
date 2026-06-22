@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CONTACT } from "@/lib/site";
-import { HERO_BG, TRUST_ITEMS } from "@/lib/home-data";
+import { HERO_BG } from "@/lib/home-data";
+import TrustStrip from "./TrustStrip";
 
 export default function Hero() {
   return (
@@ -57,17 +58,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* trust strip */}
-      <div className="relative z-[2] bg-brand text-white">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-x-[18px] gap-y-[10px] px-4 py-[18px] font-barlow-condensed text-[17px] font-bold uppercase tracking-[0.05em] sm:px-6 md:px-8">
-          {TRUST_ITEMS.map((item, i) => (
-            <span key={item} className="flex items-center gap-[18px]">
-              {i > 0 && <span className="opacity-50">·</span>}
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
+      <TrustStrip />
     </section>
   );
 }
