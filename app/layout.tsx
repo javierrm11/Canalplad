@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Barlow, Barlow_Condensed } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL } from "@/lib/site";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppFloatingButton />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
