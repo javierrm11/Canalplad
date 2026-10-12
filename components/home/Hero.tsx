@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="container-site grid items-center gap-16 pb-24 pt-14 sm:pt-[72px] lg:grid-cols-2">
         <div>
           <p className="anim-in-up inline-flex items-center gap-2.5 rounded-full bg-brand-tint py-[7px] pl-2 pr-3.5 text-sm font-bold text-brand">
-            <span className="rounded-full bg-brand px-2.5 py-[3px] text-xs text-white">15+ años</span>
+            <span className="flex-none whitespace-nowrap rounded-full bg-brand px-2.5 py-[3px] text-xs text-white">15+ años</span>
             Fabricación y montaje en Córdoba
           </p>
           <h1
@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
 
         <div className="relative pb-10 pl-6 sm:pl-10">
-          <div className="overflow-hidden rounded-[28px] shadow-[0_30px_70px_rgba(22,24,26,0.18)]">
+          <div className="overflow-hidden rounded-[28px] bg-soft shadow-[0_30px_70px_rgba(22,24,26,0.18)]">
             <Image
               src={HERO_IMAGE.src}
               alt={HERO_IMAGE.alt}

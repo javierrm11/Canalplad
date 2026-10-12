@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur-md">
-      <div className="container-site flex items-center justify-between gap-4 py-3.5">
+      <div className="container-site flex items-center justify-between gap-3 py-3.5">
         <Link href="/" aria-label="Canalplad, ir al inicio" className="inline-flex flex-none">
           <Image
             src={LOGO_SRC}
@@ -28,7 +28,7 @@ export default function Header() {
             width={196}
             height={38}
             priority
-            className="h-[32px] w-auto sm:h-[38px]"
+            className="h-[26px] w-auto min-[380px]:h-[32px] sm:h-[38px]"
           />
         </Link>
 
@@ -57,10 +57,11 @@ export default function Header() {
           </Link>
           <a
             href={CONTACT.phoneHref}
-            className="btn btn-red min-h-[46px] px-4 text-[15px] sm:hidden"
+            aria-label="Llamar a Canalplad"
+            className="btn btn-red min-h-[46px] px-3.5 text-[15px] sm:hidden"
           >
             <PhoneIcon size={17} />
-            Llamar
+            <span className="hidden min-[380px]:inline">Llamar</span>
           </a>
           <button
             type="button"

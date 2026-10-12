@@ -28,8 +28,8 @@ export default function Gallery() {
           {GALLERY_PHOTOS.map((photo, i) => (
             <li
               key={photo.src}
-              {...reveal("zoom", i * 80)}
-              className={`zoom relative overflow-hidden rounded-[20px] ${
+              {...reveal("zoom", i * 110)}
+              className={`zoom relative overflow-hidden rounded-[20px] bg-[#e9ece8] ${
                 i === 0 ? "col-span-2 row-span-2" : ""
               }`}
             >

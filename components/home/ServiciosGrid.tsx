@@ -25,7 +25,7 @@ export default function ServiciosGrid() {
               href={`/servicios#${service.slug}`}
               className="card-lift flex h-full flex-col overflow-hidden rounded-[20px] border border-line bg-white text-ink no-underline"
             >
-              <div className="zoom relative h-[210px]">
+              <div className="zoom relative h-[210px] bg-soft">
                 <Image
                   src={service.image.src}
                   alt={service.image.alt}

@@ -110,8 +110,12 @@ export default function RootLayout({
         </a>
         <TopBar />
         <Header />
-        <main id="contenido">{children}</main>
-        <Footer />
+        {/* Recorta cualquier desborde horizontal del contenido (la cabecera
+            queda fuera para que siga siendo fija al hacer scroll). */}
+        <div className="overflow-x-hidden [overflow-x:clip]">
+          <main id="contenido">{children}</main>
+          <Footer />
+        </div>
         <WhatsAppFloatingButton />
         <ScrollReveal />
         <SpeedInsights />
