@@ -20,20 +20,20 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur-md">
-      <div className="container-site flex items-center justify-between gap-3 py-3.5">
+      <div className="container-site flex items-center justify-between gap-3 py-2">
         <Link href="/" aria-label="Canalplad, ir al inicio" className="inline-flex flex-none">
           <Image
             src={LOGO_SRC}
             alt="Canalplad, canalones y pladur en Córdoba"
-            width={196}
-            height={38}
+            width={155}
+            height={30}
             priority
-            className="h-[26px] w-auto min-[380px]:h-[32px] sm:h-[38px]"
+            className="h-[24px] w-auto min-[380px]:h-[28px] sm:h-[30px]"
           />
         </Link>
 
         <nav aria-label="Principal" className="hidden lg:block">
-          <ul className="flex gap-8 text-base font-semibold">
+          <ul className="flex gap-7 text-[15px] font-semibold">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
@@ -51,14 +51,14 @@ export default function Header() {
         <div className="flex items-center gap-2.5">
           <Link
             href="/contacto#presupuesto"
-            className="btn btn-red hidden min-h-[48px] px-5 text-[15px] sm:inline-flex"
+            className="btn btn-red hidden min-h-[42px] rounded-[10px] px-4 text-sm sm:inline-flex"
           >
             Pedir presupuesto
           </Link>
           <a
             href={CONTACT.phoneHref}
             aria-label="Llamar a Canalplad"
-            className="btn btn-red min-h-[46px] px-3.5 text-[15px] sm:hidden"
+            className="btn btn-red min-h-[42px] rounded-[10px] px-3 text-sm sm:hidden"
           >
             <PhoneIcon size={17} />
             <span className="hidden min-[380px]:inline">Llamar</span>
@@ -69,7 +69,7 @@ export default function Header() {
             aria-expanded={open}
             aria-controls="menu-movil"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-xl border-[1.5px] border-[#d6d9d6] bg-white text-ink lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-[10px] border-[1.5px] border-[#d6d9d6] bg-white text-ink lg:hidden"
           >
             {open ? <CloseIcon size={22} /> : <MenuIcon size={22} />}
           </button>
@@ -88,7 +88,7 @@ export default function Header() {
               <Link
                 href={link.href}
                 aria-current={isActive(link.href) ? "page" : undefined}
-                className={`block py-3.5 no-underline ${
+                className={`block py-3 no-underline ${
                   isActive(link.href) ? "text-brand" : "text-ink"
                 }`}
               >

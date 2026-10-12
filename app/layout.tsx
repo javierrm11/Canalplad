@@ -4,7 +4,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { CONTACT, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { SITE_ICONS, businessSchema, graph, websiteSchema } from "@/lib/seo";
-import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
@@ -108,7 +107,6 @@ export default function RootLayout({
         >
           Saltar al contenido
         </a>
-        <TopBar />
         <Header />
         {/* Recorta cualquier desborde horizontal del contenido (la cabecera
             queda fuera para que siga siendo fija al hacer scroll). */}
