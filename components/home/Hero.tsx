@@ -1,64 +1,111 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CONTACT } from "@/lib/site";
-import { HERO_BG } from "@/lib/home-data";
-import TrustStrip from "./TrustStrip";
+import { HERO_IMAGE, HERO_INSET } from "@/lib/home-data";
+import { CheckIcon, ShieldIcon, WhatsappIcon } from "@/components/shared/icons";
+import { loadDelay } from "@/components/shared/reveal";
+
+const HIGHLIGHTS = ["Presupuesto sin compromiso", "Respuesta en 24-48 h", "Garantía total"];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink text-white">
-      <Image
-        src={HERO_BG.src}
-        alt={HERO_BG.alt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/[0.82] via-black/50 to-black/[0.92]" />
-
-      <div className="relative z-[2] mx-auto max-w-[1200px] px-4 pb-[120px] pt-14 sm:px-6 sm:pt-16 md:px-8 md:pt-20 lg:pt-24">
-        <div className="mb-[26px] inline-block bg-brand-red px-4 py-[7px] font-barlow-condensed text-sm font-bold uppercase tracking-[0.12em] text-white">
-          Canalones de aluminio · Pladur · Córdoba
-        </div>
-        <h1 className="mb-6 max-w-[900px] font-anton text-[clamp(38px,8.5vw,84px)] italic leading-[0.95] uppercase tracking-[-0.01em]">
-          Canalones que duran
-          <br />
-          <span className="text-brand-bright">toda la vida</span>
-        </h1>
-        <p className="mb-[38px] max-w-[620px] text-[21px] font-medium leading-[1.5] text-white/85">
-          Instalación, limpieza y reparación de canalones de aluminio y
-          trabajos de pladur en Córdoba y toda Andalucía. Más de 500 hogares
-          ya confían en nosotros.
-        </p>
-        <div className="flex flex-wrap items-center gap-[14px]">
-          <a
-            href="#presupuesto"
-            className="inline-flex items-center gap-[10px] bg-brand px-[34px] py-[18px] text-[17px] font-bold tracking-[0.02em] text-white no-underline transition-colors hover:bg-brand-hover"
+    <section aria-labelledby="hero-title" className="bg-white">
+      <div className="container-site grid items-center gap-16 pb-24 pt-14 sm:pt-[72px] lg:grid-cols-2">
+        <div>
+          <p className="anim-in-up inline-flex items-center gap-2.5 rounded-full bg-brand-tint py-[7px] pl-2 pr-3.5 text-sm font-bold text-brand">
+            <span className="rounded-full bg-brand px-2.5 py-[3px] text-xs text-white">15+ años</span>
+            Fabricación y montaje en Córdoba
+          </p>
+          <h1
+            id="hero-title"
+            style={loadDelay(60)}
+            className="anim-in-up mt-5 text-[clamp(38px,5vw,62px)] font-extrabold leading-[1.06] tracking-[-0.03em]"
           >
-            PEDIR PRESUPUESTO GRATIS →
-          </a>
-          <a
-            href={CONTACT.phoneHref}
-            className="inline-flex items-center gap-[10px] border-2 border-white/40 px-[30px] py-4 text-[17px] font-bold text-white no-underline transition-colors hover:border-brand-bright hover:text-brand-bright"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            Canalones de aluminio y pladur en Córdoba,{" "}
+            <span className="text-brand underline decoration-[#9fdcb2] decoration-[8px] underline-offset-4 [text-decoration-skip-ink:none]">
+              instalados por profesionales
+            </span>
+          </h1>
+          <p style={loadDelay(140)} className="anim-in-up mt-5 max-w-[540px] text-[19px] text-body">
+            Fabricamos los canalones a la medida de tu tejado y montamos techos y tabiques
+            de pladur. Trabajo limpio, rápido y con garantía en Córdoba y toda Andalucía.
+          </p>
+          <div style={loadDelay(220)} className="anim-in-up mt-8 flex flex-wrap gap-3">
+            <Link href="/contacto#presupuesto" className="btn btn-red min-h-[56px] px-7">
+              Pedir presupuesto gratis <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+            <a
+              href={CONTACT.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline min-h-[56px]"
             >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            LLÁMANOS AHORA
-          </a>
+              <WhatsappIcon size={20} />
+              Escribir por WhatsApp
+            </a>
+          </div>
+          <ul
+            style={loadDelay(300)}
+            className="anim-in-up mt-8 flex flex-wrap gap-x-6 gap-y-2.5 text-[15px] font-semibold text-body"
+          >
+            {HIGHLIGHTS.map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <CheckIcon size={18} className="text-brand" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="relative pb-10 pl-6 sm:pl-10">
+          <div className="overflow-hidden rounded-[28px] shadow-[0_30px_70px_rgba(22,24,26,0.18)]">
+            <Image
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              width={2048}
+              height={1536}
+              priority
+              sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 92vw"
+              className="anim-in-img h-[360px] w-full object-cover sm:h-[480px] lg:h-[540px]"
+            />
+          </div>
+          <div
+            style={loadDelay(400)}
+            className="anim-pop absolute bottom-0 left-0 w-[42%] max-w-[230px] overflow-hidden rounded-[20px] border-[6px] border-white shadow-[0_20px_44px_rgba(22,24,26,0.2)]"
+          >
+            <Image
+              src={HERO_INSET.src}
+              alt={HERO_INSET.alt}
+              width={460}
+              height={345}
+              sizes="230px"
+              className="h-[130px] w-full object-cover sm:h-[170px]"
+            />
+          </div>
+          <div
+            style={loadDelay(550)}
+            className="anim-pop absolute right-2 top-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3.5 shadow-float sm:-right-3"
+          >
+            <span className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-xl bg-brand-tint text-brand">
+              <ShieldIcon size={22} />
+            </span>
+            <span className="leading-tight">
+              <strong className="block text-base">Garantía total</strong>
+              <span className="text-[13px] text-muted">en todos los trabajos</span>
+            </span>
+          </div>
+          <div
+            style={loadDelay(750)}
+            className="anim-pop absolute bottom-2 right-4 rounded-2xl bg-ink px-4 py-3.5 text-white shadow-[0_18px_40px_rgba(22,24,26,0.25)] sm:right-6"
+          >
+            <p className="text-[15px] tracking-[2px] text-star-light" aria-label="Valoración de 5 estrellas">
+              ★★★★★
+            </p>
+            <p className="text-xl font-extrabold leading-tight">+500 clientes</p>
+            <p className="text-[13px] text-[#c4c8c4]">en Córdoba y provincia</p>
+          </div>
         </div>
       </div>
-
-      <TrustStrip />
     </section>
   );
 }

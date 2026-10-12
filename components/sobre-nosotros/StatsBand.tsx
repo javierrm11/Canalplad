@@ -1,25 +1,21 @@
-const STATS = [
-  { value: "+500", label: "clientes satisfechos" },
-  { value: "15+", label: "años de experiencia" },
-  { value: "100%", label: "trabajos garantizados" },
-  { value: "24-48h", label: "de respuesta" },
-];
+import { STATS } from "@/lib/home-data";
+import { reveal } from "@/components/shared/reveal";
+
+const COLORS = ["text-white", "text-accent-light", "text-white", "text-brand-light"];
 
 export default function StatsBand() {
   return (
-    <section className="bg-ink px-4 py-11 font-barlow text-white sm:px-6 sm:py-12 md:px-8 md:py-16">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 text-center">
-        {STATS.map((stat) => (
-          <div key={stat.value}>
-            <div className="font-anton text-[clamp(30px,6vw,52px)] italic leading-none text-brand-bright">
+    <section aria-label="Canalplad en cifras" className="bg-ink text-white">
+      <ul className="container-site grid grid-cols-2 gap-8 py-[72px] text-center lg:grid-cols-4">
+        {STATS.map((stat, i) => (
+          <li key={stat.label} {...reveal("up", i * 90)}>
+            <p className={`text-[clamp(38px,4.4vw,56px)] font-extrabold leading-none ${COLORS[i]}`}>
               {stat.value}
-            </div>
-            <div className="mt-[6px] text-[15px] text-white/70">
-              {stat.label}
-            </div>
-          </div>
+            </p>
+            <p className="mt-2 text-[#cfd3cf]">{stat.label}</p>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

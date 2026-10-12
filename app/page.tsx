@@ -1,51 +1,45 @@
-import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
+import TrustStrip from "@/components/home/TrustStrip";
 import ServiciosGrid from "@/components/home/ServiciosGrid";
 import WhyUs from "@/components/home/WhyUs";
-import GalleryMosaic from "@/components/home/GalleryMosaic";
 import Proceso from "@/components/home/Proceso";
+import Gallery from "@/components/home/Gallery";
 import Reviews from "@/components/home/Reviews";
-import ServiceArea from "@/components/home/ServiceArea";
+import ZonasFaq from "@/components/home/ZonasFaq";
 import PresupuestoSection from "@/components/home/PresupuestoSection";
-import { SITE_URL, getBusinessSchema } from "@/lib/site";
+import JsonLd from "@/components/shared/JsonLd";
+import { HOME_FAQS } from "@/lib/home-data";
+import { faqSchema, graph, pageMetadata, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Canalones y Pladur en Córdoba | Instalación Profesional - Canalplad",
-  description:
-    "Especialistas en instalación de canalones y pladur en Córdoba. Servicios de montaje, limpieza y reparación de canalones de aluminio, techos y tabiquería de pladur. Presupuesto sin compromiso.",
-  keywords:
-    "canalones Córdoba, pladur Córdoba, instalación canalones Córdoba, montaje pladur Córdoba, limpieza canalones Córdoba, techos desmontables Córdoba, reparación canalones, tabiquería pladur Córdoba, canalones aluminio Córdoba, empresa canalones Córdoba, precios canalones Córdoba",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Canalones y Pladur en Córdoba | Instalación Profesional - Canalplad",
-    description:
-      "Expertos en instalación de canalones y pladur en Córdoba. Calidad garantizada, precios competitivos y más de 500 clientes satisfechos.",
-    images: ["/imagenes/logo.webp"],
-    url: SITE_URL,
-    type: "website",
-    locale: "es_ES",
-  },
-};
+const TITLE = "Canalones de Aluminio y Pladur en Córdoba | Canalplad";
+const DESCRIPTION =
+  "Instalamos canalones de aluminio a medida y montamos techos y tabiques de pladur en Córdoba y Andalucía. Más de 15 años. Presupuesto gratis en 24-48 h.";
+
+export const metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBusinessSchema()) }}
+      <JsonLd
+        data={graph(
+          webPageSchema({ path: "/", name: TITLE, description: DESCRIPTION, breadcrumb: false }),
+          faqSchema("/", HOME_FAQS),
+        )}
       />
-      <main>
-        <Hero />
-        <ServiciosGrid />
-        <WhyUs />
-        <GalleryMosaic />
-        <Proceso />
-        <Reviews />
-        <ServiceArea />
-        <PresupuestoSection />
-      </main>
+      <Hero />
+      <TrustStrip />
+      <ServiciosGrid />
+      <WhyUs />
+      <Proceso />
+      <Gallery />
+      <Reviews />
+      <ZonasFaq />
+      <PresupuestoSection />
     </>
   );
 }

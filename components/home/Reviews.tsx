@@ -1,49 +1,54 @@
 import { REVIEWS, getInitials } from "@/lib/home-data";
-
-const AVATAR_COLORS = ["bg-brand", "bg-ink-soft", "bg-star", "bg-brand-red"];
+import { QuoteIcon } from "@/components/shared/icons";
+import { reveal } from "@/components/shared/reveal";
 
 export default function Reviews() {
   return (
-    <section className="bg-surface-soft px-4 py-14 font-barlow sm:px-6 sm:py-16 md:px-8 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1200px]">
-        <div className="mb-14 text-center">
-          <div className="mb-[14px] font-barlow-condensed text-[15px] font-bold uppercase tracking-[0.12em] text-brand">
-            Opiniones de clientes
-          </div>
-          <h2 className="m-0 font-anton text-[clamp(28px,5.6vw,48px)] italic uppercase leading-[1.05] text-ink-soft">
-            Lo que dicen de nosotros
+    <section aria-labelledby="opiniones-title" className="container-site py-24 lg:py-28">
+      <div {...reveal("up")} className="flex flex-wrap items-end justify-between gap-6">
+        <div className="max-w-[640px]">
+          <p className="eyebrow text-accent">Opiniones</p>
+          <h2 id="opiniones-title" className="heading-2 mt-2.5">
+            Lo que dicen nuestros clientes
           </h2>
         </div>
+        <div className="flex items-center gap-4">
+          <span className="text-[56px] font-extrabold leading-none">5,0</span>
+          <span>
+            <span className="text-xl tracking-[2px] text-star" aria-label="5 de 5 estrellas">
+              ★★★★★
+            </span>
+            <span className="block text-[15px] text-muted">Más de 500 clientes satisfechos</span>
+          </span>
+        </div>
+      </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
-          {REVIEWS.map((review, i) => (
-            <div
-              key={review.name}
-              className="rounded-xl bg-white p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)]"
-            >
-              <div className="mb-5 flex items-center gap-4">
-                <div
-                  className={`flex h-12 w-12 flex-none items-center justify-center rounded-full font-anton text-base text-white ${
-                    AVATAR_COLORS[i % AVATAR_COLORS.length]
+      <ul className="mt-11 grid grid-cols-1 gap-5 md:grid-cols-3">
+        {REVIEWS.map((review, i) => (
+          <li key={review.name} {...reveal("up", i * 100)}>
+            <figure className="flex h-full flex-col rounded-[20px] bg-soft p-7 sm:p-8">
+              <QuoteIcon className="text-brand-line" />
+              <blockquote className="mt-3 flex-grow text-lg">
+                <p>{review.text}</p>
+              </blockquote>
+              <figcaption className="mt-6 flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className={`inline-flex h-[42px] w-[42px] items-center justify-center rounded-full text-sm font-extrabold ${
+                    review.tone === "red" ? "bg-accent-tint text-accent-dark" : "bg-brand-tint text-brand"
                   }`}
                 >
                   {getInitials(review.name)}
-                </div>
-                <div>
-                  <div className="font-bold text-ink-soft">{review.name}</div>
-                  <div className="text-sm text-[#8a8a85]">
-                    {review.location}
-                  </div>
-                </div>
-              </div>
-              <div className="mb-[14px] text-lg text-star">★★★★★</div>
-              <p className="text-base leading-[1.6] text-ink-muted">
-                {review.text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+                </span>
+                <span className="leading-tight">
+                  <strong className="block">{review.name}</strong>
+                  <span className="text-sm text-muted">{review.location}</span>
+                </span>
+              </figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

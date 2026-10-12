@@ -1,35 +1,43 @@
+import Link from "next/link";
 import { CONTACT } from "@/lib/site";
+import { reveal } from "@/components/shared/reveal";
 
 interface CtaBandProps {
   title: string;
   description: string;
+  /** Segundo botón: formulario (por defecto) o WhatsApp. */
+  secondary?: "form" | "whatsapp";
 }
 
-export default function CtaBand({ title, description }: CtaBandProps) {
+export default function CtaBand({ title, description, secondary = "form" }: CtaBandProps) {
   return (
-    <section className="bg-brand px-4 py-[46px] text-center font-barlow text-white sm:px-6 sm:py-14 md:px-8 md:py-[72px]">
-      <div className="mx-auto max-w-[760px]">
-        <h2 className="mb-4 font-anton text-[clamp(26px,5vw,42px)] italic uppercase leading-[1.05]">
+    <section className="px-4 py-24 sm:px-6 lg:px-8">
+      <div
+        {...reveal("zoom")}
+        className="mx-auto max-w-site rounded-[32px] bg-brand px-6 py-12 text-center text-white sm:px-12 sm:py-16 lg:py-[72px]"
+      >
+        <h2 className="text-[clamp(30px,3.8vw,50px)] font-extrabold leading-[1.1] tracking-[-0.025em]">
           {title}
         </h2>
-        <p className="mb-[30px] text-[19px] leading-[1.55] text-white/[0.92]">
-          {description}
-        </p>
-        <div className="flex flex-wrap justify-center gap-[14px]">
-          <a
-            href={CONTACT.phoneHref}
-            className="rounded-lg bg-white px-[30px] py-4 text-[17px] font-bold text-brand no-underline"
-          >
-            📞 {CONTACT.phoneDisplay}
+        <p className="mx-auto mt-3.5 max-w-[640px] text-[19px] text-[#dff3e5]">{description}</p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a href={CONTACT.phoneHref} className="btn btn-white min-h-[58px] px-7 text-xl font-extrabold">
+            Llamar al {CONTACT.phoneDisplay}
           </a>
-          <a
-            href={CONTACT.whatsappHref}
-            target="_blank"
-            rel="noopener"
-            className="rounded-lg bg-ink px-[30px] py-4 text-[17px] font-bold text-white no-underline"
-          >
-            WhatsApp
-          </a>
+          {secondary === "form" ? (
+            <Link href="/contacto#presupuesto" className="btn btn-dark min-h-[58px] px-7 text-lg">
+              Rellenar formulario <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+          ) : (
+            <a
+              href={CONTACT.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-dark min-h-[58px] px-7 text-lg"
+            >
+              Escribir por WhatsApp
+            </a>
+          )}
         </div>
       </div>
     </section>

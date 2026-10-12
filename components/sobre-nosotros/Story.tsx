@@ -1,38 +1,46 @@
 import Image from "next/image";
+import { STORY_IMAGE } from "@/lib/pages-data";
+import { HomeIcon } from "@/components/shared/icons";
+import { reveal } from "@/components/shared/reveal";
 
 export default function Story() {
   return (
-    <section className="bg-white px-4 py-[52px] font-barlow sm:px-6 sm:py-16 md:px-8 md:py-[84px]">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center gap-[30px] sm:gap-10 md:gap-14">
-        <div>
-          <div className="mb-3 font-barlow-condensed text-sm font-bold uppercase tracking-[0.12em] text-brand">
-            Nuestra historia
-          </div>
-          <h2 className="mb-5 font-anton text-[clamp(26px,4.8vw,40px)] italic uppercase leading-[1.05] text-ink-soft">
-            Más de 15 años protegiendo hogares en Córdoba
-          </h2>
-          <p className="mb-4 text-[17px] leading-[1.7] text-ink-faint">
-            Empezamos como un pequeño taller en Villafranca de Córdoba y, con
-            el tiempo y el trabajo bien hecho, nos hemos convertido en una
-            empresa de referencia en canalones y pladur en toda la
-            provincia.
-          </p>
-          <p className="m-0 text-[17px] leading-[1.7] text-ink-faint">
-            Más de 500 familias y comunidades confían ya en nosotros. Nuestro
-            secreto es sencillo: materiales de calidad, precios justos,
-            cumplir lo que prometemos y tratar la casa del cliente como si
-            fuera la nuestra.
-          </p>
-        </div>
-        <div className="relative h-[420px] w-full overflow-hidden rounded-2xl">
+    <section aria-labelledby="historia-title" className="container-site grid items-center gap-16 py-24 lg:grid-cols-2 lg:py-28">
+      <div {...reveal("left")}>
+        <p className="eyebrow text-accent">Nuestra historia</p>
+        <h2 id="historia-title" className="heading-2 mt-2.5">
+          Más de 15 años protegiendo hogares en Córdoba
+        </h2>
+        <p className="mt-5 text-lg text-body">
+          Empezamos como un pequeño taller en Villafranca de Córdoba y, con el tiempo y el
+          trabajo bien hecho, nos hemos convertido en una empresa de referencia en canalones
+          y pladur en toda la provincia.
+        </p>
+        <p className="mt-4 text-lg text-body">
+          Más de 500 familias y comunidades confían ya en nosotros. Nuestro secreto es
+          sencillo: materiales de calidad, precios justos, cumplir lo que prometemos y tratar
+          la casa del cliente como si fuera la nuestra.
+        </p>
+      </div>
+      <div {...reveal("right")} className="relative pb-8">
+        <div className="zoom overflow-hidden rounded-3xl">
           <Image
-            src="/imagenes/canalones-cordoba-5.webp"
-            alt="Varios canalones de aluminio instalados con bajantes en Córdoba"
-            fill
-            loading="lazy"
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
+            src={STORY_IMAGE.src}
+            alt={STORY_IMAGE.alt}
+            width={2048}
+            height={1536}
+            sizes="(min-width: 1024px) 560px, 92vw"
+            className="h-[320px] w-full object-cover sm:h-[460px]"
           />
+        </div>
+        <div className="absolute bottom-0 left-0 flex items-center gap-3.5 rounded-[18px] bg-white px-5 py-4 shadow-float sm:-left-3">
+          <span className="inline-flex h-[46px] w-[46px] items-center justify-center rounded-xl bg-accent-tint text-accent-dark">
+            <HomeIcon size={22} />
+          </span>
+          <span className="leading-tight">
+            <strong className="block">Taller propio</strong>
+            <span className="text-sm text-muted">Villafranca de Córdoba</span>
+          </span>
         </div>
       </div>
     </section>

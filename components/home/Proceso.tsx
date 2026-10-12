@@ -1,33 +1,33 @@
 import { PROCESS_STEPS } from "@/lib/home-data";
+import SectionHeading from "@/components/shared/SectionHeading";
+import { reveal } from "@/components/shared/reveal";
 
 export default function Proceso() {
   return (
-    <section className="bg-white px-4 py-14 font-barlow sm:px-6 sm:py-16 md:px-8 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1200px]">
-        <div className="mb-14 text-center">
-          <div className="mb-[14px] font-barlow-condensed text-[15px] font-bold uppercase tracking-[0.12em] text-brand">
-            Cómo trabajamos
-          </div>
-          <h2 className="m-0 font-anton text-[clamp(28px,5.6vw,48px)] italic uppercase leading-[1.05] text-ink-soft">
-            Así de fácil, en 3 pasos
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-7">
-          {PROCESS_STEPS.map((step) => (
-            <div key={step.number} className="px-4 text-center">
-              <div className="mx-auto mb-[22px] flex h-16 w-16 items-center justify-center rounded-full bg-brand font-anton text-[clamp(24px,4vw,34px)] text-white">
+    <section aria-labelledby="proceso-title" className="container-site py-24 lg:py-28">
+      <SectionHeading
+        id="proceso-title"
+        eyebrow="Cómo trabajamos"
+        title="Tres pasos, sin complicaciones"
+        align="center"
+      />
+      <div className="relative mt-14">
+        <div
+          aria-hidden="true"
+          {...reveal("line")}
+          className="absolute left-[16%] right-[16%] top-[31px] hidden h-0.5 bg-brand-line md:block"
+        />
+        <ol className="relative grid grid-cols-1 gap-8 md:grid-cols-3">
+          {PROCESS_STEPS.map((step, i) => (
+            <li key={step.number} {...reveal("up", i * 120)} className="text-center">
+              <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-brand text-2xl font-extrabold text-white shadow-[0_0_0_8px_#ffffff]">
                 {step.number}
-              </div>
-              <h3 className="mb-[10px] text-[21px] font-bold text-ink-soft">
-                {step.title}
-              </h3>
-              <p className="m-0 text-[15px] leading-[1.6] text-ink-faint">
-                {step.description}
-              </p>
-            </div>
+              </span>
+              <h3 className="mt-4 text-[21px] font-extrabold">{step.title}</h3>
+              <p className="mx-auto mt-2 max-w-[300px] text-body">{step.description}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

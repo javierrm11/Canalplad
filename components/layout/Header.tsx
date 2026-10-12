@@ -2,138 +2,112 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { CONTACT, LOGO_SRC, NAV_LINKS } from "@/lib/site";
-
-const PhoneIcon = ({ size = 16 }: { size?: number }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.4"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-  </svg>
-);
-
-const WhatsappIcon = ({ size = 18 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="#fff">
-    <path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.3A10 10 0 1 0 12 2z" />
-  </svg>
-);
+import { CloseIcon, MenuIcon, PhoneIcon, WhatsappIcon } from "@/components/shared/icons";
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
-    <div className="sticky top-0 z-50 border-b border-white/10 bg-ink">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-[13px] font-barlow sm:px-6 md:px-8">
-        <Link href="/" className="block flex-none leading-none">
+    <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur-md">
+      <div className="container-site flex items-center justify-between gap-4 py-3.5">
+        <Link href="/" aria-label="Canalplad, ir al inicio" className="inline-flex flex-none">
           <Image
             src={LOGO_SRC}
-            alt="Canalplad — Canalones y Pladur en Córdoba"
-            width={150}
-            height={36}
+            alt="Canalplad, canalones y pladur en Córdoba"
+            width={196}
+            height={38}
             priority
-            className="block h-8 w-auto"
+            className="h-[32px] w-auto sm:h-[38px]"
           />
         </Link>
 
-        {/* desktop links */}
-        <div className="hidden items-center gap-4 font-barlow-condensed text-sm font-semibold uppercase tracking-[0.05em] text-white/80 min-[881px]:flex md:gap-6 lg:gap-[30px]">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-inherit no-underline transition-colors hover:text-brand-bright"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href={CONTACT.phoneHref}
-            className="flex items-center gap-[9px] rounded-md bg-brand px-5 py-[11px] font-semibold tracking-[0.03em] text-white no-underline transition-colors hover:bg-brand-hover"
-          >
-            <PhoneIcon />
-            {CONTACT.phoneDisplay}
-          </a>
-        </div>
+        <nav aria-label="Principal" className="hidden lg:block">
+          <ul className="flex gap-8 text-base font-semibold">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className="nav-link text-ink no-underline"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        {/* mobile: call button + burger */}
-        <div className="flex items-center gap-[10px] min-[881px]:hidden">
+        <div className="flex items-center gap-2.5">
+          <Link
+            href="/contacto#presupuesto"
+            className="btn btn-red hidden min-h-[48px] px-5 text-[15px] sm:inline-flex"
+          >
+            Pedir presupuesto
+          </Link>
           <a
             href={CONTACT.phoneHref}
-            className="flex items-center gap-[7px] rounded-md bg-brand px-4 py-[10px] font-barlow-condensed text-[15px] font-semibold uppercase tracking-[0.03em] text-white no-underline"
+            className="btn btn-red min-h-[46px] px-4 text-[15px] sm:hidden"
           >
-            <PhoneIcon size={15} />
+            <PhoneIcon size={17} />
             Llamar
           </a>
           <button
             type="button"
             onClick={() => setOpen((o) => !o)}
-            aria-label="Menú"
-            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.18] bg-white/[0.08] text-white"
+            aria-expanded={open}
+            aria-controls="menu-movil"
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            className="inline-flex h-12 w-12 items-center justify-center rounded-xl border-[1.5px] border-[#d6d9d6] bg-white text-ink lg:hidden"
           >
-            {open ? (
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-              >
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-              >
-                <path d="M3 6h18M3 12h18M3 18h18" />
-              </svg>
-            )}
+            {open ? <CloseIcon size={22} /> : <MenuIcon size={22} />}
           </button>
         </div>
       </div>
 
-      {/* mobile dropdown panel */}
-      {open && (
-        <div className="flex flex-col border-t border-white/10 bg-ink px-4 pb-[18px] pt-2 font-barlow-condensed min-[881px]:hidden sm:px-6 md:px-8">
-          {NAV_LINKS.map((link, i) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className={`py-[14px] text-lg font-semibold uppercase tracking-[0.04em] text-white no-underline ${
-                i < NAV_LINKS.length - 1 ? "border-b border-white/[0.08]" : ""
-              }`}
-            >
-              {link.label}
-            </Link>
+      <nav
+        id="menu-movil"
+        aria-label="Menú móvil"
+        hidden={!open}
+        className="border-t border-line bg-white lg:hidden"
+      >
+        <ul className="container-site flex flex-col pb-4 pt-2 text-lg font-bold">
+          {NAV_LINKS.map((link) => (
+            <li key={link.href} className="border-b border-[#eef0ed] last:border-0">
+              <Link
+                href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`block py-3.5 no-underline ${
+                  isActive(link.href) ? "text-brand" : "text-ink"
+                }`}
+              >
+                {link.label}
+              </Link>
+            </li>
           ))}
-          <a
-            href={CONTACT.whatsappHref}
-            target="_blank"
-            rel="noopener"
-            onClick={() => setOpen(false)}
-            className="mt-[14px] flex items-center justify-center gap-[9px] rounded-lg bg-whatsapp p-[14px] text-base font-bold uppercase tracking-[0.03em] text-white no-underline"
-          >
-            <WhatsappIcon />
-            Escríbenos por WhatsApp
-          </a>
-        </div>
-      )}
-    </div>
+          <li className="pt-3">
+            <a
+              href={CONTACT.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-green w-full"
+            >
+              <WhatsappIcon size={20} />
+              Escríbenos por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
